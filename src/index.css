@@ -155,4 +155,60 @@
   .text-balance {
     text-wrap: balance;
   }
+
+  /* Hero Grid Pattern */
+  .hero-grid-pattern {
+    background-image: 
+      linear-gradient(rgba(59, 130, 246, 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(59, 130, 246, 0.05) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+
+  /* Neon Glow Effects for Dark Hero */
+  .neon-glow-blue {
+    box-shadow: 
+      0 0 20px hsla(217, 91%, 60%, 0.5),
+      0 0 40px hsla(217, 91%, 60%, 0.3),
+      0 0 60px hsla(217, 91%, 60%, 0.1);
+  }
+
+  .neon-glow-blue-subtle {
+    box-shadow: 0 0 10px hsla(217, 91%, 60%, 0.4);
+  }
+
+  .neon-glow-violet {
+    box-shadow: 
+      0 0 20px hsla(258, 90%, 66%, 0.5),
+      0 0 40px hsla(258, 90%, 66%, 0.3),
+      0 0 60px hsla(258, 90%, 66%, 0.1);
+  }
+
+  /* Gradient Border Animation */
+  .gradient-border-animated {
+    position: relative;
+  }
+  .gradient-border-animated::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1px;
+    background: linear-gradient(135deg, hsl(217 91% 60%), hsl(258 90% 66%), hsl(217 91% 60%));
+    background-size: 200% 200%;
+    animation: gradient-shift 4s ease infinite;
+    -webkit-mask: 
+      linear-gradient(#fff 0 0) content-box, 
+      linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    pointer-events: none;
+  }
+
+  /* Animated Gradient Orbs */
+  .orb-blue {
+    background: radial-gradient(circle, hsla(217, 91%, 60%, 0.4) 0%, transparent 70%);
+  }
+
+  .orb-violet {
+    background: radial-gradient(circle, hsla(258, 90%, 66%, 0.4) 0%, transparent 70%);
+  }
 }
