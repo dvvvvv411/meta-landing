@@ -6,7 +6,7 @@ const footerLinks = {
     { label: "FAQ", href: "#faq" },
   ],
   company: [
-    { label: "Über uns", href: "#" },
+    { label: "Über uns", href: "/ueber-uns" },
     { label: "Blog", href: "#" },
     { label: "Karriere", href: "#" },
     { label: "Kontakt", href: "#" },
