@@ -2,14 +2,11 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Check, Sparkles } from "lucide-react";
 
 const benefits = [
-  "Unbegrenzte Kampagnen",
-  "Dashboard & API Zugang",
-  "Agency Trust Level Account",
-  "Priorisierter Support",
-  "Keine versteckten Kosten",
-  "Flexible Skalierung",
-  "24/7 Account Monitoring",
   "Sofortige Aktivierung",
+  "Keine Setup Kosten",
+  "Skalierbare Limits",
+  "API-Synchronisierung",
+  "Automatische Rechnungen",
 ];
 
 const Pricing = () => {
@@ -23,13 +20,9 @@ const Pricing = () => {
       <div className="container-tight relative z-10">
         {/* Section header */}
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <span className="inline-block text-sm font-medium text-primary mb-4">Preise</span>
-          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 text-balance">
-            Transparent & fair
+          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 text-balance">
+            Transparent. Fair. Skalierbar.
           </h2>
-          <p className="text-lg text-muted-foreground">
-            Ein einfaches Preismodell ohne Überraschungen.
-          </p>
         </div>
 
         {/* Pricing Card */}
@@ -43,7 +36,7 @@ const Pricing = () => {
               <div className="flex justify-center mb-8">
                 <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-primary/10 to-accent/10 border border-primary/20">
                   <Sparkles className="w-4 h-4 text-primary" />
-                  <span className="text-sm font-medium text-foreground">Alles inklusive</span>
+                  <span className="text-sm font-medium text-foreground">Agency Account</span>
                 </div>
               </div>
 
@@ -59,11 +52,11 @@ const Pricing = () => {
               </div>
 
               {/* Benefits */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">
+              <div className="flex flex-col gap-3 mb-10">
                 {benefits.map((benefit) => (
                   <div key={benefit} className="flex items-center gap-3">
-                    <div className="w-5 h-5 rounded-full bg-green-500/10 flex items-center justify-center flex-shrink-0">
-                      <Check className="w-3 h-3 text-green-500" />
+                    <div className="w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                      <Check className="w-3 h-3 text-primary" />
                     </div>
                     <span className="text-sm text-foreground">{benefit}</span>
                   </div>
