@@ -1,0 +1,49 @@
+import { Button } from "@/components/ui/button";
+import { ArrowRight } from "lucide-react";
+
+const Header = () => {
+  return (
+    <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-xl border-b border-border/50">
+      <div className="container-tight">
+        <div className="flex items-center justify-between h-16 md:h-20">
+          {/* Logo */}
+          <a href="/" className="flex items-center gap-2 group">
+            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-primary to-accent flex items-center justify-center">
+              <span className="text-primary-foreground font-display font-bold text-sm">M</span>
+            </div>
+            <span className="font-display font-semibold text-foreground text-lg tracking-tight">
+              MetaNetwork
+              <span className="text-muted-foreground">.Agency</span>
+            </span>
+          </a>
+
+          {/* Navigation */}
+          <nav className="hidden md:flex items-center gap-8">
+            <a href="#features" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+              Features
+            </a>
+            <a href="#how-it-works" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+              So funktioniert's
+            </a>
+            <a href="#pricing" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+              Pricing
+            </a>
+          </nav>
+
+          {/* CTA */}
+          <div className="flex items-center gap-3">
+            <Button variant="ghost" size="sm" className="hidden sm:inline-flex">
+              Login
+            </Button>
+            <Button variant="hero" size="sm" className="group">
+              Jetzt starten
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
+            </Button>
+          </div>
+        </div>
+      </div>
+    </header>
+  );
+};
+
+export default Header;
