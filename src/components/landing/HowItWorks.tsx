@@ -1,23 +1,23 @@
-import { UserPlus, CreditCard, Rocket } from "lucide-react";
+import { UserPlus, Wallet, Rocket } from "lucide-react";
 
 const steps = [
   {
     icon: UserPlus,
     step: "01",
-    title: "Account erstellen",
-    description: "Registrieren Sie sich in wenigen Minuten. Vollständig automatisiert, ohne Support-Kontakt.",
+    title: "Registrieren",
+    description: "Erstellen Sie in wenigen Minuten Ihren Account — vollautomatisch und ohne Support-Kontakt.",
   },
   {
-    icon: CreditCard,
+    icon: Wallet,
     step: "02",
-    title: "Plan auswählen",
-    description: "Wählen Sie das passende Paket für Ihre Anforderungen. Flexible Optionen für jedes Budget.",
+    title: "Account mieten & Guthaben hinterlegen",
+    description: "Wählen Sie Ihren Plan und laden Sie Ihr Werbebudget sicher auf.",
   },
   {
     icon: Rocket,
     step: "03",
-    title: "Kampagnen starten",
-    description: "Ihr verifizierter Account ist sofort einsatzbereit. Starten Sie direkt mit der Skalierung.",
+    title: "Kampagnen live schalten",
+    description: "Starten Sie sofort mit Ihren Meta Ads — Ihr Account ist bereit.",
   },
 ];
 
@@ -35,10 +35,10 @@ const HowItWorks = () => {
         <div className="text-center max-w-2xl mx-auto mb-16">
           <span className="inline-block text-sm font-medium text-primary mb-4">So funktioniert's</span>
           <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 text-balance">
-            In 3 Schritten zum skalierbaren Account
+            In 3 Schritten live
           </h2>
           <p className="text-lg text-muted-foreground">
-            Unser automatisierter Onboarding-Prozess bringt Sie schnell und sicher ans Ziel.
+            Unser automatisierter Onboarding-Prozess bringt Sie schnell ans Ziel.
           </p>
         </div>
 
@@ -58,7 +58,7 @@ const HowItWorks = () => {
               <div className="text-center">
                 {/* Icon */}
                 <div className="relative inline-flex mb-6">
-                  <div className="w-20 h-20 rounded-3xl bg-card shadow-card flex items-center justify-center border border-border/50 group-hover:shadow-glow transition-shadow duration-300">
+                  <div className="w-20 h-20 rounded-3xl bg-card shadow-card flex items-center justify-center border border-border/50">
                     <item.icon className="w-9 h-9 text-primary" />
                   </div>
                   <span className="absolute -top-2 -right-2 w-8 h-8 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center text-sm font-bold text-primary-foreground shadow-lg">

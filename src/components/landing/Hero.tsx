@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Sparkles, Shield, Zap } from "lucide-react";
+import { ArrowRight, TrendingUp, BarChart3, Users, DollarSign } from "lucide-react";
 
 const Hero = () => {
   return (
@@ -12,68 +12,131 @@ const Hero = () => {
       </div>
 
       <div className="container-tight relative z-10">
-        <div className="max-w-4xl mx-auto text-center">
-          {/* Badge */}
-          <div 
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-card/70 backdrop-blur-xl border border-border/50 shadow-soft mb-8 opacity-0 animate-fade-up"
-            style={{ animationDelay: "0.1s" }}
-          >
-            <Sparkles className="w-4 h-4 text-primary" />
-            <span className="text-sm font-medium text-muted-foreground">
-              Verifizierte Meta Ads Accounts
-            </span>
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-16">
+            {/* Headline */}
+            <h1 
+              className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-foreground mb-6 opacity-0 animate-fade-up text-balance"
+              style={{ animationDelay: "0.1s" }}
+            >
+              Meta Ads Infrastruktur{" "}
+              <span className="gradient-text">für Skalierer.</span>
+            </h1>
+
+            {/* Subheadline */}
+            <p 
+              className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-10 opacity-0 animate-fade-up text-balance"
+              style={{ animationDelay: "0.2s" }}
+            >
+              Miete geprüfte Meta Agency Accounts und erstelle Kampagnen in unserem 
+              automatisierten Dashboard — stabil, sicher und sofort einsatzbereit.
+            </p>
+
+            {/* CTA Button */}
+            <div 
+              className="flex flex-col items-center gap-4 mb-6 opacity-0 animate-fade-up"
+              style={{ animationDelay: "0.3s" }}
+            >
+              <Button variant="hero" size="xl" className="group">
+                Jetzt registrieren
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Button>
+              <p className="text-sm text-muted-foreground">
+                Keine Verifizierung erforderlich · Sofort startklar
+              </p>
+            </div>
           </div>
 
-          {/* Headline */}
-          <h1 
-            className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-foreground mb-6 opacity-0 animate-fade-up text-balance"
-            style={{ animationDelay: "0.2s" }}
-          >
-            Skalieren Sie Ihre{" "}
-            <span className="gradient-text">Meta Ads</span>
-            <br className="hidden sm:block" />
-            ohne Limits
-          </h1>
-
-          {/* Subheadline */}
-          <p 
-            className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 opacity-0 animate-fade-up text-balance"
-            style={{ animationDelay: "0.3s" }}
-          >
-            Premium Ad Accounts für E-Commerce Brands, Agenturen und Performance-Marketer. 
-            Automatisches Onboarding. Sofortige Skalierung.
-          </p>
-
-          {/* CTA Buttons */}
+          {/* Dashboard Mockup */}
           <div 
-            className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16 opacity-0 animate-fade-up"
+            className="relative opacity-0 animate-fade-up"
             style={{ animationDelay: "0.4s" }}
           >
-            <Button variant="hero" size="xl" className="group w-full sm:w-auto">
-              Account erstellen
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </Button>
-            <Button variant="glass" size="xl" className="w-full sm:w-auto">
-              Demo ansehen
-            </Button>
-          </div>
+            <div className="relative rounded-3xl overflow-hidden glass-card border border-border/50 p-4 md:p-6 shadow-elevated">
+              {/* Dashboard Header */}
+              <div className="flex items-center justify-between mb-6 pb-4 border-b border-border/30">
+                <div className="flex items-center gap-3">
+                  <div className="w-3 h-3 rounded-full bg-destructive/70" />
+                  <div className="w-3 h-3 rounded-full bg-yellow-400/70" />
+                  <div className="w-3 h-3 rounded-full bg-green-400/70" />
+                </div>
+                <div className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-secondary/50 text-sm text-muted-foreground">
+                  <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
+                  Live Dashboard
+                </div>
+              </div>
 
-          {/* Trust indicators */}
-          <div 
-            className="flex flex-wrap items-center justify-center gap-6 md:gap-10 opacity-0 animate-fade-up"
-            style={{ animationDelay: "0.5s" }}
-          >
-            <div className="flex items-center gap-2 text-muted-foreground">
-              <Shield className="w-5 h-5 text-primary" />
-              <span className="text-sm font-medium">100% Verifiziert</span>
+              {/* Dashboard Grid */}
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+                <div className="p-4 rounded-2xl bg-background/50 border border-border/30">
+                  <div className="flex items-center gap-2 mb-2">
+                    <DollarSign className="w-4 h-4 text-primary" />
+                    <span className="text-xs text-muted-foreground">Ad Spend</span>
+                  </div>
+                  <p className="font-display text-xl md:text-2xl font-bold text-foreground">€47,892</p>
+                  <span className="text-xs text-green-500">+12.5%</span>
+                </div>
+                <div className="p-4 rounded-2xl bg-background/50 border border-border/30">
+                  <div className="flex items-center gap-2 mb-2">
+                    <TrendingUp className="w-4 h-4 text-accent" />
+                    <span className="text-xs text-muted-foreground">ROAS</span>
+                  </div>
+                  <p className="font-display text-xl md:text-2xl font-bold text-foreground">4.2x</p>
+                  <span className="text-xs text-green-500">+0.8x</span>
+                </div>
+                <div className="p-4 rounded-2xl bg-background/50 border border-border/30">
+                  <div className="flex items-center gap-2 mb-2">
+                    <Users className="w-4 h-4 text-primary" />
+                    <span className="text-xs text-muted-foreground">Leads</span>
+                  </div>
+                  <p className="font-display text-xl md:text-2xl font-bold text-foreground">2,847</p>
+                  <span className="text-xs text-green-500">+23.1%</span>
+                </div>
+                <div className="p-4 rounded-2xl bg-background/50 border border-border/30">
+                  <div className="flex items-center gap-2 mb-2">
+                    <BarChart3 className="w-4 h-4 text-accent" />
+                    <span className="text-xs text-muted-foreground">Conversions</span>
+                  </div>
+                  <p className="font-display text-xl md:text-2xl font-bold text-foreground">892</p>
+                  <span className="text-xs text-green-500">+18.7%</span>
+                </div>
+              </div>
+
+              {/* Chart Placeholder */}
+              <div className="h-32 md:h-48 rounded-2xl bg-gradient-to-br from-primary/5 via-accent/5 to-primary/5 border border-border/30 flex items-end justify-around px-4 pb-4">
+                {[40, 65, 45, 80, 55, 90, 70, 85, 60, 95, 75, 88].map((height, i) => (
+                  <div 
+                    key={i}
+                    className="w-4 md:w-6 rounded-t-lg bg-gradient-to-t from-primary to-accent opacity-60"
+                    style={{ height: `${height}%` }}
+                  />
+                ))}
+              </div>
             </div>
-            <div className="flex items-center gap-2 text-muted-foreground">
-              <Zap className="w-5 h-5 text-primary" />
-              <span className="text-sm font-medium">Sofort einsatzbereit</span>
+
+            {/* Floating elements */}
+            <div className="absolute -top-4 -right-4 md:-top-8 md:-right-8 p-3 md:p-4 rounded-2xl glass-card border border-border/50 shadow-card animate-float">
+              <div className="flex items-center gap-2">
+                <div className="w-8 h-8 rounded-lg bg-green-500/10 flex items-center justify-center">
+                  <TrendingUp className="w-4 h-4 text-green-500" />
+                </div>
+                <div>
+                  <p className="text-xs text-muted-foreground">Kampagnen</p>
+                  <p className="font-semibold text-foreground">24 aktiv</p>
+                </div>
+              </div>
             </div>
-            <div className="flex items-center gap-2 text-muted-foreground">
-              <Sparkles className="w-5 h-5 text-primary" />
-              <span className="text-sm font-medium">2.500+ Kunden</span>
+
+            <div className="absolute -bottom-4 -left-4 md:-bottom-6 md:-left-6 p-3 md:p-4 rounded-2xl glass-card border border-border/50 shadow-card animate-float" style={{ animationDelay: "-2s" }}>
+              <div className="flex items-center gap-2">
+                <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center">
+                  <Users className="w-4 h-4 text-primary" />
+                </div>
+                <div>
+                  <p className="text-xs text-muted-foreground">Account Status</p>
+                  <p className="font-semibold text-green-500">Verifiziert</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>

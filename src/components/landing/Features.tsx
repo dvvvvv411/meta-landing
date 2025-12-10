@@ -1,35 +1,25 @@
-import { Shield, Zap, TrendingUp, Users, Clock, Headphones } from "lucide-react";
+import { TrendingUp, ShieldCheck, Award, Zap } from "lucide-react";
 
 const features = [
   {
-    icon: Shield,
-    title: "Verifizierte Accounts",
-    description: "Alle Accounts sind vollständig verifiziert und durchlaufen strenge Qualitätskontrollen.",
+    icon: TrendingUp,
+    title: "Skalierbare Limits",
+    description: "Höhere Spending Limits ohne künstliche Beschränkungen. Skalieren Sie Ihre Kampagnen nach Bedarf.",
+  },
+  {
+    icon: ShieldCheck,
+    title: "Geringes Sperrungsrisiko",
+    description: "Agency Trust Level minimiert Account-Sperren erheblich. Mehr Stabilität für Ihre Kampagnen.",
+  },
+  {
+    icon: Award,
+    title: "Meta Agency Trust Level",
+    description: "Premium-Verifizierung für maximale Stabilität und Vertrauen bei Meta.",
   },
   {
     icon: Zap,
-    title: "Sofortige Aktivierung",
-    description: "Kein Warten. Ihr Account ist innerhalb von Minuten nach dem Onboarding einsatzbereit.",
-  },
-  {
-    icon: TrendingUp,
-    title: "Unbegrenzte Skalierung",
-    description: "Skalieren Sie Ihre Kampagnen ohne künstliche Limits oder Spending Caps.",
-  },
-  {
-    icon: Users,
-    title: "Multi-Account Management",
-    description: "Verwalten Sie mehrere Accounts zentral über ein einziges Dashboard.",
-  },
-  {
-    icon: Clock,
-    title: "24/7 Monitoring",
-    description: "Proaktive Überwachung Ihrer Accounts für maximale Uptime und Performance.",
-  },
-  {
-    icon: Headphones,
-    title: "Priority Support",
-    description: "Direkter Zugang zu unserem Expertenteam bei allen Fragen und Anliegen.",
+    title: "Automatisiertes Dashboard & API",
+    description: "Kampagnen-Management per intuitivem Dashboard oder programmatisch via API.",
   },
 ];
 
@@ -39,18 +29,17 @@ const Features = () => {
       <div className="container-tight">
         {/* Section header */}
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <span className="inline-block text-sm font-medium text-primary mb-4">Features</span>
+          <span className="inline-block text-sm font-medium text-primary mb-4">Vorteile</span>
           <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 text-balance">
-            Alles was Sie für erfolgreiche Kampagnen brauchen
+            Warum MetaNetwork?
           </h2>
           <p className="text-lg text-muted-foreground">
-            Eine komplette Infrastruktur für professionelles Meta Advertising — 
-            ohne Kompromisse bei Qualität oder Zuverlässigkeit.
+            Die Infrastruktur, die professionelle Advertiser für nachhaltiges Wachstum brauchen.
           </p>
         </div>
 
         {/* Features grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {features.map((feature, index) => (
             <div
               key={feature.title}
