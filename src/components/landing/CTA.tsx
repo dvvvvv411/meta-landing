@@ -13,23 +13,20 @@ const CTA = () => {
         <div className="max-w-4xl mx-auto text-center">
           <div className="p-12 md:p-16 rounded-[2.5rem] glass-card border border-border/50 shadow-elevated">
             <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 text-balance">
-              Bereit, Ihre Kampagnen zu skalieren?
+              Bereit durchzustarten?
             </h2>
             <p className="text-lg text-muted-foreground max-w-xl mx-auto mb-10">
               Erstellen Sie jetzt Ihren Account und starten Sie in wenigen Minuten 
-              mit verifiziertem Meta Advertising.
+              mit skalierbarem Meta Advertising.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Button variant="hero" size="xl" className="group w-full sm:w-auto">
-                Kostenlos starten
+                Jetzt kostenlos registrieren
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </Button>
-              <Button variant="glass" size="xl" className="w-full sm:w-auto">
-                Sales kontaktieren
               </Button>
             </div>
             <p className="text-sm text-muted-foreground mt-6">
-              Kein Commitment. Jederzeit kündbar.
+              Keine Verifizierung erforderlich · Sofort startklar
             </p>
           </div>
         </div>
