@@ -139,6 +139,10 @@ export default {
           "0%": { transform: "scaleX(0)", opacity: "0" },
           "100%": { transform: "scaleX(1)", opacity: "1" },
         },
+        "fade-up-bar": {
+          "0%": { opacity: "0", transform: "translateY(8px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -155,6 +159,7 @@ export default {
         "gradient-shift": "gradient-shift 4s ease infinite",
         "grow-up": "grow-up 0.6s ease-out forwards",
         "grow-width": "grow-width 0.8s ease-out forwards",
+        "fade-up-bar": "fade-up-bar 0.6s ease-out forwards",
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

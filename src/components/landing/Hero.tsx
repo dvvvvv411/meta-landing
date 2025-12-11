@@ -163,14 +163,16 @@ const Hero = () => {
                           { height: 92, day: "Sa" },
                           { height: 78, day: "So" },
                         ].map((bar, i) => (
-                          <div key={i} className="flex-1 flex flex-col items-center gap-1">
-                            <div 
-                              className="w-full rounded-t-md bg-gradient-to-t from-primary to-accent animate-grow-up origin-bottom"
-                              style={{ 
-                                height: `${bar.height}%`,
-                                animationDelay: `${1 + i * 0.1}s`
-                              }}
-                            />
+                          <div key={i} className="flex-1 flex flex-col items-center gap-1 h-full">
+                            <div className="flex-1 w-full flex items-end">
+                              <div 
+                                className="w-full rounded-t-md bg-gradient-to-t from-primary to-accent animate-fade-up-bar"
+                                style={{ 
+                                  height: `${bar.height}%`,
+                                  animationDelay: `${1 + i * 0.1}s`
+                                }}
+                              />
+                            </div>
                             <span className="text-[9px] text-slate-500">{bar.day}</span>
                           </div>
                         ))}
