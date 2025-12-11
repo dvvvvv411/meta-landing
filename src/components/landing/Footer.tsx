@@ -1,4 +1,4 @@
-import { ArrowRight, Twitter, Linkedin, Instagram } from "lucide-react";
+import { ArrowRight, Twitter, Linkedin, Instagram, CheckCircle2, Shield, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
@@ -36,30 +36,71 @@ interface FooterProps {
 const Footer = ({ hideCTA = false }: FooterProps) => {
   return (
     <footer className="relative">
-      {/* CTA Banner */}
+      {/* CTA Banner - Modern Design */}
       {!hideCTA && (
       <div className="border-t border-border/30">
-        <div className="container-tight py-12">
-          <div className="relative overflow-hidden rounded-2xl bg-gradient-to-r from-primary/10 via-accent/5 to-primary/10 border border-primary/20 p-8 md:p-12">
-            {/* Glow effect */}
-            <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-accent/5 blur-3xl" />
+        <div className="container-tight py-16">
+          <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 border border-white/10 p-10 md:p-14">
             
-            <div className="relative flex flex-col md:flex-row items-center justify-between gap-6">
-              <div>
-                <h3 className="font-display text-2xl md:text-3xl font-semibold text-foreground mb-2">
-                  Bereit, zu starten?
-                </h3>
-                <p className="text-muted-foreground">
-                  Starte noch heute mit MetaNetwork und skaliere deine Kampagnen.
-                </p>
+            {/* Animated Background Elements */}
+            <div className="absolute inset-0 pointer-events-none overflow-hidden">
+              {/* Gradient Orbs */}
+              <div className="absolute -top-20 -left-20 w-[300px] h-[300px] bg-primary/30 rounded-full blur-3xl animate-pulse" />
+              <div className="absolute -bottom-20 -right-20 w-[350px] h-[350px] bg-accent/25 rounded-full blur-3xl animate-pulse" style={{ animationDelay: "1s" }} />
+              
+              {/* Grid Pattern */}
+              <div className="absolute inset-0 opacity-10" style={{
+                backgroundImage: `linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+                                 linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px)`,
+                backgroundSize: '40px 40px'
+              }} />
+              
+              {/* Floating Elements */}
+              <div className="absolute top-8 right-[20%] w-3 h-3 rounded-full bg-primary/50 animate-ping" style={{ animationDuration: "3s" }} />
+              <div className="absolute bottom-10 left-[15%] w-2 h-2 rounded-full bg-accent/50 animate-ping" style={{ animationDuration: "4s", animationDelay: "1s" }} />
+            </div>
+            
+            {/* Content */}
+            <div className="relative z-10 text-center">
+              {/* Badge */}
+              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-sm border border-white/10 mb-6">
+                <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
+                <span className="text-white/70 text-sm">Keine Kreditkarte erforderlich</span>
               </div>
+              
+              {/* Headline */}
+              <h3 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
+                Bereit durchzustarten?
+              </h3>
+              <p className="text-white/60 text-lg max-w-xl mx-auto mb-8">
+                Erstelle jetzt deinen Account und starte in wenigen Minuten mit skalierbarem Meta Advertising.
+              </p>
+              
+              {/* CTA Button */}
               <Button 
-                size="lg" 
-                className="group bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg shadow-primary/25 hover:shadow-primary/40 transition-all duration-300"
+                variant="hero"
+                size="xl" 
+                className="group"
               >
-                Registrieren
-                <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                Jetzt kostenlos registrieren
+                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </Button>
+              
+              {/* Trust Elements */}
+              <div className="flex flex-wrap items-center justify-center gap-6 mt-8 text-white/40 text-sm">
+                <span className="flex items-center gap-2">
+                  <CheckCircle2 className="w-4 h-4 text-green-400" />
+                  Sofort startklar
+                </span>
+                <span className="flex items-center gap-2">
+                  <Shield className="w-4 h-4 text-primary" />
+                  DSGVO-konform
+                </span>
+                <span className="flex items-center gap-2">
+                  <Zap className="w-4 h-4 text-accent" />
+                  24h Support
+                </span>
+              </div>
             </div>
           </div>
         </div>
