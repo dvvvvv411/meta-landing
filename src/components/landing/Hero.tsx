@@ -72,14 +72,13 @@ const Hero = () => {
               className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start opacity-0 animate-fade-up"
               style={{ animationDelay: "0.5s" }}
             >
-              <div className="group relative rounded-full p-[1px] bg-gradient-to-r from-primary via-accent to-primary overflow-hidden">
-                <Button 
-                  size="xl" 
-                  className="relative bg-slate-950/80 backdrop-blur-sm hover:bg-slate-950/60 text-white rounded-full transition-all border-0"
+              <div className="group relative rounded-2xl p-[1.5px] bg-gradient-to-r from-primary via-accent to-primary">
+                <button 
+                  className="relative flex items-center justify-center gap-2 h-16 px-10 bg-slate-950/80 backdrop-blur-sm hover:bg-slate-950/60 text-white text-lg font-semibold rounded-2xl transition-all"
                 >
                   Preise sehen
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                </Button>
+                </button>
               </div>
               <Button 
                 variant="outline" 
