@@ -22,9 +22,6 @@ const Header = () => {
             <a href="#features" className="text-sm text-slate-400 hover:text-white transition-colors">
               Features
             </a>
-            <a href="/wie-funktioniert-es" className="text-sm text-slate-400 hover:text-white transition-colors">
-              So funktioniert's
-            </a>
             <a href="#pricing" className="text-sm text-slate-400 hover:text-white transition-colors">
               Pricing
             </a>
