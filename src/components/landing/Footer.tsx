@@ -1,12 +1,14 @@
-import { ArrowRight, Twitter, Linkedin, Instagram, CheckCircle2, Shield, Zap } from "lucide-react";
+import { ArrowRight, CheckCircle2, Shield, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
 const footerLinks = {
-  product: [
-    { label: "Features", href: "/#features" },
-    { label: "Pricing", href: "/#pricing" },
-    { label: "FAQ", href: "/#faq" },
+  navigation: [
+    { label: "So funktioniert's", href: "#how-it-works" },
+    { label: "Dashboard", href: "#dashboard" },
+    { label: "Vorteile", href: "#vorteile" },
+    { label: "Preise", href: "#pricing" },
+    { label: "FAQ", href: "#faq" },
   ],
   company: [
     { label: "Blog", href: "#" },
@@ -19,12 +21,6 @@ const footerLinks = {
     { label: "Impressum", href: "#" },
   ],
 };
-
-const socialLinks = [
-  { icon: Twitter, href: "#", label: "Twitter" },
-  { icon: Linkedin, href: "#", label: "LinkedIn" },
-  { icon: Instagram, href: "#", label: "Instagram" },
-];
 
 interface FooterProps {
   hideCTA?: boolean;
@@ -92,7 +88,7 @@ const Footer = ({ hideCTA = false }: FooterProps) => {
       <div className="bg-secondary/20 border-t border-border/30">
         <div className="container-tight py-16">
           <div className="grid grid-cols-2 md:grid-cols-5 gap-8 lg:gap-12">
-            {/* Brand & Social */}
+            {/* Brand */}
             <div className="col-span-2">
               <Link to="/" className="flex items-center gap-2.5 mb-4">
                 <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-primary to-accent flex items-center justify-center shadow-lg shadow-primary/20">
@@ -102,39 +98,25 @@ const Footer = ({ hideCTA = false }: FooterProps) => {
                   MetaNetwork
                 </span>
               </Link>
-              <p className="text-sm text-muted-foreground max-w-xs mb-6 leading-relaxed">
+              <p className="text-sm text-muted-foreground max-w-xs leading-relaxed">
                 Premium Meta Ads Accounts für professionelles Performance Marketing. Sicher, skalierbar, sofort einsatzbereit.
               </p>
-              
-              {/* Social Icons */}
-              <div className="flex items-center gap-3">
-                {socialLinks.map((social) => (
-                  <a
-                    key={social.label}
-                    href={social.href}
-                    aria-label={social.label}
-                    className="w-10 h-10 rounded-xl bg-secondary/50 border border-border/50 flex items-center justify-center text-muted-foreground hover:text-foreground hover:bg-secondary hover:border-primary/30 hover:shadow-lg hover:shadow-primary/10 transition-all duration-300"
-                  >
-                    <social.icon className="h-4 w-4" />
-                  </a>
-                ))}
-              </div>
             </div>
 
-            {/* Product */}
+            {/* Navigation */}
             <div>
               <h4 className="font-display font-semibold text-foreground mb-4 text-sm uppercase tracking-wider">
-                Produkt
+                Navigation
               </h4>
               <ul className="space-y-3">
-                {footerLinks.product.map((link) => (
+                {footerLinks.navigation.map((link) => (
                   <li key={link.label}>
-                    <Link
-                      to={link.href}
+                    <a
+                      href={link.href}
                       className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-200"
                     >
                       {link.label}
-                    </Link>
+                    </a>
                   </li>
                 ))}
               </ul>
