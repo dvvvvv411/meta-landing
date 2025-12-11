@@ -1,8 +1,9 @@
 import Header from "@/components/landing/Header";
 import Footer from "@/components/landing/Footer";
-import { Mail, Send, ChevronDown, Clock, MessageCircle, Shield, Lock, BadgeCheck, Globe, HelpCircle } from "lucide-react";
+import { Mail, Send, ChevronDown, Clock, MessageCircle, Shield, Lock, BadgeCheck, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
-
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
 const ContactPage = () => {
   return (
     <div className="min-h-screen flex flex-col">
@@ -162,30 +163,62 @@ const ContactPage = () => {
               </div>
             </div>
             
-            {/* FAQ Section - Below Card */}
+            {/* Contact Form - Below Card */}
             <div 
               className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-6 md:p-8 mt-12 max-w-3xl mx-auto opacity-0 animate-fade-in"
               style={{ animationDelay: "0.8s", animationFillMode: "forwards" }}
             >
               <div className="flex items-center gap-3 mb-6">
-                <HelpCircle className="w-5 h-5 text-primary" />
-                <h2 className="font-display text-lg font-semibold text-white">Häufige Fragen</h2>
+                <Send className="w-5 h-5 text-primary" />
+                <h2 className="font-display text-lg font-semibold text-white">Nachricht senden</h2>
               </div>
               
-              <div className="space-y-5">
-                <div className="border-b border-white/10 pb-4">
-                  <h3 className="text-white/90 font-medium mb-1">Wie schnell erhalte ich eine Antwort?</h3>
-                  <p className="text-white/50 text-sm">Wir antworten in der Regel innerhalb von 24 Stunden – oft sogar schneller.</p>
+              <form className="space-y-5">
+                {/* Name & Email Row */}
+                <div className="grid md:grid-cols-2 gap-4">
+                  <div className="space-y-2">
+                    <label className="text-white/70 text-sm font-medium">Name</label>
+                    <Input 
+                      type="text" 
+                      placeholder="Ihr vollständiger Name"
+                      className="bg-white/5 border-white/10 text-white placeholder:text-white/30 focus:border-primary/50 focus-visible:ring-primary/30"
+                    />
+                  </div>
+                  <div className="space-y-2">
+                    <label className="text-white/70 text-sm font-medium">E-Mail</label>
+                    <Input 
+                      type="email" 
+                      placeholder="ihre@email.de"
+                      className="bg-white/5 border-white/10 text-white placeholder:text-white/30 focus:border-primary/50 focus-visible:ring-primary/30"
+                    />
+                  </div>
                 </div>
-                <div className="border-b border-white/10 pb-4">
-                  <h3 className="text-white/90 font-medium mb-1">Welche Kontaktmöglichkeit ist die schnellste?</h3>
-                  <p className="text-white/50 text-sm">Telegram bietet die schnellste Kommunikation für dringende Anfragen.</p>
+                
+                {/* Phone */}
+                <div className="space-y-2">
+                  <label className="text-white/70 text-sm font-medium">Telefonnummer</label>
+                  <Input 
+                    type="tel" 
+                    placeholder="+49 123 456789"
+                    className="bg-white/5 border-white/10 text-white placeholder:text-white/30 focus:border-primary/50 focus-visible:ring-primary/30"
+                  />
                 </div>
-                <div>
-                  <h3 className="text-white/90 font-medium mb-1">Gibt es Support in meiner Sprache?</h3>
-                  <p className="text-white/50 text-sm">Unser Support ist auf Deutsch und Englisch verfügbar.</p>
+                
+                {/* Message */}
+                <div className="space-y-2">
+                  <label className="text-white/70 text-sm font-medium">Nachricht</label>
+                  <Textarea 
+                    placeholder="Wie können wir Ihnen helfen?"
+                    rows={5}
+                    className="bg-white/5 border-white/10 text-white placeholder:text-white/30 focus:border-primary/50 focus-visible:ring-primary/30 min-h-[150px] resize-none"
+                  />
                 </div>
-              </div>
+                
+                {/* Submit Button */}
+                <Button variant="hero" className="w-full" type="button">
+                  Nachricht absenden
+                </Button>
+              </form>
             </div>
             
             {/* Trust Badges Row */}
