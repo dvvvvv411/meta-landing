@@ -1,49 +1,18 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Shield, TrendingUp, Cpu, BadgeCheck, Headphones, Check } from "lucide-react";
+import { ArrowRight, Check } from "lucide-react";
 
-const valueFeatures = [
-  {
-    icon: Shield,
-    title: "Verifizierter Meta Agency Account",
-    description: "Bereits geprüft und einsatzbereit"
-  },
-  {
-    icon: TrendingUp,
-    title: "Unbegrenzte Spending Limits",
-    description: "Skalieren Sie ohne Einschränkungen"
-  },
-  {
-    icon: Cpu,
-    title: "Automatisiertes Dashboard & API",
-    description: "Volle Kontrolle über Ihre Kampagnen"
-  },
-  {
-    icon: BadgeCheck,
-    title: "Meta Agency Trust Level",
-    description: "Höchste Vertrauensstufe für Ihre Ads"
-  },
-  {
-    icon: Headphones,
-    title: "Priorisierter Support",
-    description: "Schnelle Hilfe wenn Sie sie brauchen"
-  },
-];
-
-const guarantees = [
+const features = [
+  "Verifizierter Meta Agency Account",
+  "Unbegrenzte Spending Limits",
+  "Automatisiertes Dashboard & API",
+  "Priorisierter Support",
   "Sofortige Aktivierung",
-  "Keine Setup-Kosten",
-  "Automatische Rechnungen",
 ];
 
 const Pricing = () => {
   return (
-    <section id="pricing" className="section-padding bg-background relative overflow-hidden">
-      {/* Background decoration */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-radial from-primary/5 via-transparent to-transparent rounded-full" />
-      </div>
-
-      <div className="container-tight relative z-10">
+    <section id="pricing" className="section-padding bg-background">
+      <div className="container-tight">
         {/* Section header */}
         <div className="text-center max-w-2xl mx-auto mb-12">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-sm text-primary mb-4">
@@ -57,75 +26,41 @@ const Pricing = () => {
           </p>
         </div>
 
-        {/* Main Pricing Card */}
-        <div className="max-w-4xl mx-auto">
-          <div className="relative group">
-            {/* Subtle gradient border effect */}
-            <div className="absolute -inset-[1px] rounded-3xl bg-gradient-to-r from-primary/30 via-accent/30 to-primary/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-            
-            <div className="relative glass-card rounded-3xl p-8 md:p-10 lg:p-12 border border-border/50">
-              <div className="grid md:grid-cols-2 gap-10 lg:gap-16">
-                
-                {/* Left: Value Features */}
-                <div>
-                  <h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-6">
-                    Was Sie bekommen
-                  </h3>
-                  <div className="space-y-5">
-                    {valueFeatures.map((feature) => (
-                      <div key={feature.title} className="flex gap-4">
-                        <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
-                          <feature.icon className="w-5 h-5 text-primary" />
-                        </div>
-                        <div>
-                          <h4 className="font-medium text-foreground">{feature.title}</h4>
-                          <p className="text-sm text-muted-foreground">{feature.description}</p>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
-                {/* Right: Pricing & CTA */}
-                <div className="flex flex-col">
-                  <h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-6">
-                    Ihre Investition
-                  </h3>
-                  
-                  {/* Price */}
-                  <div className="mb-6">
-                    <div className="flex items-baseline gap-2">
-                      <span className="font-display text-5xl lg:text-6xl font-bold text-foreground">150€</span>
-                      <span className="text-xl text-muted-foreground">/Monat</span>
-                    </div>
-                    <p className="text-muted-foreground mt-2">
-                      + <span className="font-semibold text-foreground">2%</span> Top-Up Fee
-                    </p>
-                  </div>
-
-                  {/* CTA Button */}
-                  <Button variant="hero" size="xl" className="w-full group mb-4">
-                    Jetzt registrieren
-                    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                  </Button>
-
-                  <p className="text-center text-sm text-muted-foreground mb-6">
-                    Keine Bindung. Jederzeit kündbar.
-                  </p>
-
-                  {/* Guarantees */}
-                  <div className="mt-auto pt-6 border-t border-border/50">
-                    <div className="space-y-2">
-                      {guarantees.map((guarantee) => (
-                        <div key={guarantee} className="flex items-center gap-2">
-                          <Check className="w-4 h-4 text-primary" />
-                          <span className="text-sm text-muted-foreground">{guarantee}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
+        {/* Pricing Card */}
+        <div className="max-w-xl mx-auto">
+          <div className="glass-card rounded-3xl p-10 md:p-16 text-center">
+            {/* Price */}
+            <div className="mb-8">
+              <div className="flex items-baseline justify-center gap-2">
+                <span className="font-display text-6xl md:text-7xl font-bold text-foreground">150€</span>
               </div>
+              <p className="text-xl text-muted-foreground mt-2">pro Monat</p>
+              <p className="text-muted-foreground mt-1">
+                + <span className="font-medium text-foreground">2%</span> Top-Up Fee
+              </p>
+            </div>
+
+            {/* CTA Button */}
+            <Button variant="hero" size="xl" className="w-full max-w-xs mx-auto group mb-4">
+              Jetzt starten
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </Button>
+
+            <p className="text-sm text-muted-foreground mb-8">
+              Keine Bindung. Jederzeit kündbar.
+            </p>
+
+            {/* Divider */}
+            <div className="w-full h-px bg-border mb-8" />
+
+            {/* Features */}
+            <div className="space-y-3 text-left max-w-xs mx-auto">
+              {features.map((feature) => (
+                <div key={feature} className="flex items-center gap-3">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span className="text-muted-foreground">{feature}</span>
+                </div>
+              ))}
             </div>
           </div>
         </div>
