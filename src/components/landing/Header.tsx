@@ -18,12 +18,21 @@ const Header = () => {
           </a>
 
           {/* Navigation */}
-          <nav className="hidden md:flex items-center gap-8">
-            <a href="#features" className="text-sm text-slate-400 hover:text-white transition-colors">
-              Features
+          <nav className="hidden md:flex items-center gap-6">
+            <a href="#how-it-works" className="text-sm text-slate-400 hover:text-white transition-colors">
+              So funktioniert's
+            </a>
+            <a href="#dashboard" className="text-sm text-slate-400 hover:text-white transition-colors">
+              Dashboard
+            </a>
+            <a href="#vorteile" className="text-sm text-slate-400 hover:text-white transition-colors">
+              Vorteile
             </a>
             <a href="#pricing" className="text-sm text-slate-400 hover:text-white transition-colors">
-              Pricing
+              Preise
+            </a>
+            <a href="#faq" className="text-sm text-slate-400 hover:text-white transition-colors">
+              FAQ
             </a>
           </nav>
 

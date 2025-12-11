@@ -35,7 +35,7 @@ const features = [
 
 const Comparison = () => {
   return (
-    <section className="section-padding bg-secondary/30 relative overflow-hidden">
+    <section id="vorteile" className="section-padding bg-secondary/30 relative overflow-hidden">
       <div className="container-tight relative z-10">
         {/* Section header */}
         <div className="text-center max-w-2xl mx-auto mb-12">
