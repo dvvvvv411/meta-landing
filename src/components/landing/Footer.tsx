@@ -29,10 +29,15 @@ const socialLinks = [
   { icon: Instagram, href: "#", label: "Instagram" },
 ];
 
-const Footer = () => {
+interface FooterProps {
+  hideCTA?: boolean;
+}
+
+const Footer = ({ hideCTA = false }: FooterProps) => {
   return (
     <footer className="relative">
       {/* CTA Banner */}
+      {!hideCTA && (
       <div className="border-t border-border/30">
         <div className="container-tight py-12">
           <div className="relative overflow-hidden rounded-2xl bg-gradient-to-r from-primary/10 via-accent/5 to-primary/10 border border-primary/20 p-8 md:p-12">
@@ -59,6 +64,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
+      )}
 
       {/* Main Footer */}
       <div className="bg-secondary/20 border-t border-border/30">

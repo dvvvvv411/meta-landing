@@ -17,7 +17,7 @@ const ContactPage = () => {
         <div className="absolute top-1/4 left-1/4 w-96 h-96 orb-blue rounded-full blur-3xl animate-pulse" />
         <div className="absolute bottom-1/4 right-1/4 w-80 h-80 orb-violet rounded-full blur-3xl animate-pulse" style={{ animationDelay: "1s" }} />
         
-        <div className="relative z-10 section-padding py-24 md:py-32 flex items-center justify-center min-h-[70vh]">
+        <div className="relative z-10 section-padding flex items-center justify-center min-h-[calc(100vh-80px)]">
           <div className="container-tight">
             {/* One Large Glassmorphism Card */}
             <div className="relative bg-white/5 backdrop-blur-2xl border border-white/10 rounded-3xl p-8 md:p-12 lg:p-16 max-w-5xl mx-auto">
@@ -91,7 +91,7 @@ const ContactPage = () => {
         </div>
       </section>
       
-      <Footer />
+      <Footer hideCTA />
     </div>
   );
 };
