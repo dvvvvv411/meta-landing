@@ -34,9 +34,9 @@ const Hero = () => {
               className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-6xl xl:text-7xl font-bold tracking-tight text-white mb-6 opacity-0 animate-fade-up"
               style={{ animationDelay: "0.2s" }}
             >
-              Geprüfte Meta Accounts.{" "}
+              Meta Ads Infrastruktur{" "}
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary via-primary-glow to-accent">
-                Sofort einsatzbereit.
+                für Skalierer.
               </span>
             </h1>
 
