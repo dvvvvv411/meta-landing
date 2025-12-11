@@ -36,15 +36,9 @@ const features = [
 const Comparison = () => {
   return (
     <section className="section-padding bg-secondary/30 relative overflow-hidden">
-      {/* Background decoration */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-0 right-1/4 w-64 h-64 bg-primary/5 rounded-full blur-3xl" />
-        <div className="absolute bottom-0 left-1/4 w-64 h-64 bg-accent/5 rounded-full blur-3xl" />
-      </div>
-
       <div className="container-tight relative z-10">
         {/* Section header */}
-        <div className="text-center max-w-2xl mx-auto mb-16">
+        <div className="text-center max-w-2xl mx-auto mb-12">
           <span className="inline-block text-sm font-medium text-primary mb-4">Vergleich</span>
           <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 text-balance">
             Der Unterschied macht's
@@ -54,75 +48,56 @@ const Comparison = () => {
           </p>
         </div>
 
-        {/* Two Cards Comparison */}
-        <div className="grid md:grid-cols-2 gap-6 lg:gap-8 max-w-5xl mx-auto">
-          {/* Normal Account Card */}
-          <div className="opacity-0 animate-fade-up" style={{ animationDelay: "0.1s" }}>
-            <div className="h-full rounded-3xl bg-muted/50 border border-border/50 p-8 relative">
-              <div className="text-center mb-8">
-                <span className="inline-block px-4 py-1.5 rounded-full bg-muted text-muted-foreground text-sm font-medium mb-4">
-                  Normaler Account
-                </span>
-                <p className="text-muted-foreground/70 text-sm">Standard Meta Ads Account</p>
-              </div>
-
-              <div className="space-y-5">
-                {features.map((feature) => (
-                  <div key={feature.name} className="flex items-start gap-3">
-                    <div className="flex-shrink-0 w-6 h-6 rounded-full bg-destructive/10 flex items-center justify-center mt-0.5">
-                      <X className="w-3.5 h-3.5 text-destructive/70" />
-                    </div>
-                    <div>
-                      <p className="font-medium text-muted-foreground/80 text-sm">{feature.name}</p>
-                      <p className="text-muted-foreground/60 text-sm">{feature.normal}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
+        {/* Single Card with Table */}
+        <div className="glass-card rounded-3xl p-6 md:p-8 hover-lift max-w-4xl mx-auto">
+          {/* Table Header */}
+          <div className="hidden md:grid grid-cols-3 gap-4 pb-4 border-b border-border/50 mb-4">
+            <div className="text-sm font-semibold text-muted-foreground">Feature</div>
+            <div className="text-sm font-semibold text-muted-foreground text-center">Normaler Account</div>
+            <div className="text-sm font-semibold text-primary text-center">MetaNetwork</div>
           </div>
 
-          {/* MetaNetwork Card */}
-          <div className="opacity-0 animate-fade-up" style={{ animationDelay: "0.2s" }}>
-            <div className="h-full rounded-3xl relative group">
-              {/* Gradient border glow */}
-              <div className="absolute -inset-[1px] bg-gradient-to-br from-primary via-accent to-primary rounded-3xl opacity-70 group-hover:opacity-100 transition-opacity blur-sm" />
-              <div className="absolute -inset-[1px] bg-gradient-to-br from-primary via-accent to-primary rounded-3xl opacity-50" />
-              
-              {/* Card content */}
-              <div className="relative h-full rounded-3xl bg-background p-8 hover-lift">
-                {/* Empfohlen Badge */}
-                <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                  <span className="inline-block px-4 py-1.5 rounded-full bg-gradient-to-r from-primary to-accent text-primary-foreground text-sm font-semibold shadow-lg animate-pulse">
-                    Empfohlen
-                  </span>
+          {/* Table Rows - Desktop */}
+          <div className="hidden md:block space-y-1">
+            {features.map((feature, index) => (
+              <div 
+                key={feature.name} 
+                className={`grid grid-cols-3 gap-4 py-4 ${index !== features.length - 1 ? 'border-b border-border/30' : ''}`}
+              >
+                <div className="font-medium text-foreground">{feature.name}</div>
+                <div className="flex items-center justify-center gap-2 text-muted-foreground/70">
+                  <X className="w-4 h-4 text-destructive/70 flex-shrink-0" />
+                  <span className="text-sm">{feature.normal}</span>
                 </div>
-
-                <div className="text-center mb-8 mt-4">
-                  <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
-                    MetaNetwork
-                  </span>
-                  <p className="text-muted-foreground text-sm">Premium Agency Account</p>
+                <div className="flex items-center justify-center gap-2 text-foreground">
+                  <Check className="w-4 h-4 text-green-500 flex-shrink-0" />
+                  <span className="text-sm">{feature.metanetwork}</span>
                 </div>
-
-                <div className="space-y-5">
-                  {features.map((feature) => (
-                    <div key={feature.name} className="flex items-start gap-3">
-                      <div className="flex-shrink-0 w-6 h-6 rounded-full bg-green-500/10 flex items-center justify-center mt-0.5">
-                        <Check className="w-3.5 h-3.5 text-green-500" />
-                      </div>
-                      <div>
-                        <p className="font-medium text-foreground text-sm">{feature.name}</p>
-                        <p className="text-muted-foreground text-sm">{feature.metanetwork}</p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-
-                {/* Subtle inner glow */}
-                <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-primary/5 via-transparent to-accent/5 pointer-events-none" />
               </div>
-            </div>
+            ))}
+          </div>
+
+          {/* Mobile Layout - Stacked */}
+          <div className="md:hidden space-y-4">
+            {features.map((feature) => (
+              <div key={feature.name} className="bg-muted/30 rounded-xl p-4 space-y-3">
+                <div className="font-semibold text-foreground">{feature.name}</div>
+                <div className="flex items-start gap-2 text-muted-foreground/70">
+                  <X className="w-4 h-4 text-destructive/70 flex-shrink-0 mt-0.5" />
+                  <div>
+                    <span className="text-xs text-muted-foreground block mb-0.5">Normaler Account</span>
+                    <span className="text-sm">{feature.normal}</span>
+                  </div>
+                </div>
+                <div className="flex items-start gap-2 text-foreground">
+                  <Check className="w-4 h-4 text-green-500 flex-shrink-0 mt-0.5" />
+                  <div>
+                    <span className="text-xs text-primary block mb-0.5">MetaNetwork</span>
+                    <span className="text-sm">{feature.metanetwork}</span>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>
