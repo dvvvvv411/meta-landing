@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Shield, TrendingUp, Cpu, BadgeCheck, Headphones, Check } from "lucide-react";
+import { ArrowRight, Shield, TrendingUp, Cpu, BadgeCheck } from "lucide-react";
 
 const valueFeatures = [
   {
@@ -22,17 +22,6 @@ const valueFeatures = [
     title: "Meta Agency Trust Level",
     description: "Höchste Vertrauensstufe für Ihre Ads"
   },
-  {
-    icon: Headphones,
-    title: "Priorisierter Support",
-    description: "Schnelle Hilfe wenn Sie sie brauchen"
-  },
-];
-
-const guarantees = [
-  "Sofortige Aktivierung",
-  "Keine Setup-Kosten",
-  "Automatische Rechnungen",
 ];
 
 const Pricing = () => {
@@ -89,7 +78,7 @@ const Pricing = () => {
                 {/* Right: Pricing & CTA */}
                 <div className="flex flex-col">
                   <h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-6">
-                    Ihre Investition
+                    Preis
                   </h3>
                   
                   {/* Price */}
@@ -109,21 +98,9 @@ const Pricing = () => {
                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </Button>
 
-                  <p className="text-center text-sm text-muted-foreground mb-6">
-                    Keine Bindung. Jederzeit kündbar.
+                  <p className="text-center text-sm text-muted-foreground">
+                    Volle Flexibilität. Monatlich kündbar.
                   </p>
-
-                  {/* Guarantees */}
-                  <div className="mt-auto pt-6 border-t border-border/50">
-                    <div className="space-y-2">
-                      {guarantees.map((guarantee) => (
-                        <div key={guarantee} className="flex items-center gap-2">
-                          <Check className="w-4 h-4 text-primary" />
-                          <span className="text-sm text-muted-foreground">{guarantee}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>
