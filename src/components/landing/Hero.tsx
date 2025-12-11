@@ -95,13 +95,17 @@ const Hero = () => {
               className="w-full max-w-[480px] lg:max-w-[520px] opacity-0 animate-scale-in"
               style={{ animationDelay: "0.5s" }}
             >
-              <div className="relative rounded-2xl bg-slate-900/90 backdrop-blur-xl border border-slate-700/50 shadow-2xl overflow-hidden">
+              <div className="relative rounded-2xl bg-white/5 backdrop-blur-2xl border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.4)] overflow-hidden">
                 {/* Glow Effect */}
                 <div className="absolute -inset-1 bg-gradient-to-r from-primary/20 via-accent/20 to-primary/20 rounded-2xl blur-xl opacity-50" />
                 
+                {/* Glass Shine Effect */}
+                <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/30 to-transparent" />
+                <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-white/10 via-transparent to-transparent pointer-events-none" />
+                
                 <div className="relative">
                   {/* Window Chrome Header */}
-                  <div className="flex items-center justify-between px-4 py-3 border-b border-slate-700/50 bg-slate-800/50">
+                  <div className="flex items-center justify-between px-4 py-3 border-b border-white/10 bg-white/5 backdrop-blur-md">
                     <div className="flex items-center gap-2">
                       <div className="w-3 h-3 rounded-full bg-red-500/80" />
                       <div className="w-3 h-3 rounded-full bg-yellow-500/80" />
@@ -113,7 +117,7 @@ const Hero = () => {
 
                   <div className="p-4 md:p-5">
                     {/* Account Status Bar */}
-                    <div className="flex items-center justify-between p-3 rounded-xl bg-slate-800/50 border border-slate-700/30 mb-4">
+                    <div className="flex items-center justify-between p-3 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 mb-4">
                       <div className="flex items-center gap-2">
                         <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
                         <span className="text-xs text-slate-300">Account Status: <span className="text-green-400 font-medium">Verifiziert</span></span>
@@ -131,7 +135,7 @@ const Hero = () => {
                       ].map((metric, i) => (
                         <div 
                           key={i} 
-                          className="p-3 rounded-xl bg-slate-800/50 border border-slate-700/30 opacity-0 animate-fade-up"
+                          className="p-3 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-colors opacity-0 animate-fade-up"
                           style={{ animationDelay: `${0.7 + i * 0.1}s` }}
                         >
                           <p className="text-[10px] text-slate-500 uppercase tracking-wider mb-1">{metric.label}</p>
@@ -144,7 +148,7 @@ const Hero = () => {
                     </div>
 
                     {/* Performance Chart */}
-                    <div className="p-4 rounded-xl bg-slate-800/30 border border-slate-700/20 mb-4">
+                    <div className="p-4 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 mb-4">
                       <div className="flex items-center justify-between mb-3">
                         <span className="text-xs font-medium text-slate-400">Performance (7 Tage)</span>
                         <span className="text-[10px] text-slate-500">€67,420 Gesamt</span>
@@ -161,7 +165,7 @@ const Hero = () => {
                         ].map((bar, i) => (
                           <div key={i} className="flex-1 flex flex-col items-center gap-1">
                             <div 
-                              className="w-full rounded-t-md bg-gradient-to-t from-primary to-accent opacity-0 animate-scale-in origin-bottom"
+                              className="w-full rounded-t-md bg-gradient-to-t from-primary to-accent animate-grow-up origin-bottom"
                               style={{ 
                                 height: `${bar.height}%`,
                                 animationDelay: `${1 + i * 0.1}s`
@@ -176,7 +180,7 @@ const Hero = () => {
                     {/* Two Column Info */}
                     <div className="grid grid-cols-2 gap-3 mb-4">
                       {/* Active Campaigns */}
-                      <div className="p-3 rounded-xl bg-slate-800/30 border border-slate-700/20">
+                      <div className="p-3 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10">
                         <p className="text-[10px] text-slate-500 uppercase tracking-wider mb-2">Aktive Kampagnen</p>
                         <div className="space-y-2">
                           {[
@@ -193,7 +197,7 @@ const Hero = () => {
                       </div>
 
                       {/* Recent Activity */}
-                      <div className="p-3 rounded-xl bg-slate-800/30 border border-slate-700/20">
+                      <div className="p-3 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10">
                         <p className="text-[10px] text-slate-500 uppercase tracking-wider mb-2">Letzte Aktivität</p>
                         <div className="space-y-2">
                           {[
@@ -214,14 +218,14 @@ const Hero = () => {
                     </div>
 
                     {/* Spend Limit Progress */}
-                    <div className="p-3 rounded-xl bg-slate-800/30 border border-slate-700/20">
+                    <div className="p-3 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10">
                       <div className="flex items-center justify-between mb-2">
                         <span className="text-[10px] text-slate-500 uppercase tracking-wider">Spend Limit</span>
                         <span className="text-[10px] text-slate-400">€78,500 / €100,000</span>
                       </div>
-                      <div className="h-2 rounded-full bg-slate-700/50 overflow-hidden">
+                      <div className="h-2 rounded-full bg-white/10 overflow-hidden">
                         <div 
-                          className="h-full rounded-full bg-gradient-to-r from-primary to-accent opacity-0 animate-fade-up"
+                          className="h-full rounded-full bg-gradient-to-r from-primary to-accent animate-grow-width origin-left"
                           style={{ width: "78.5%", animationDelay: "1.5s" }}
                         />
                       </div>
