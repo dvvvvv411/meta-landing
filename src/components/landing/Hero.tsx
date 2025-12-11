@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Check, Zap } from "lucide-react";
+import metaIcon from "@/assets/metaicon.png";
 
 const Hero = () => {
   return (
@@ -113,7 +114,7 @@ const Hero = () => {
                       <div className="w-3 h-3 rounded-full bg-green-500/80" />
                     </div>
                     <span className="text-xs font-medium text-slate-400">MetaNetwork Dashboard</span>
-                    <div className="w-16" />
+                    <img src={metaIcon} alt="Meta" className="w-5 h-5 opacity-60" />
                   </div>
 
                   <div className="p-4 md:p-5">
