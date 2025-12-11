@@ -81,43 +81,15 @@ const Pricing = () => {
                     Preis
                   </h3>
                   
-                  {/* Price + Crypto */}
-                  <div className="mb-6 flex items-start justify-between gap-4">
-                    {/* Left: Price */}
-                    <div>
-                      <div className="flex items-baseline gap-2">
-                        <span className="font-display text-5xl lg:text-6xl font-bold text-foreground">150€</span>
-                        <span className="text-xl text-muted-foreground">/Monat</span>
-                      </div>
-                      <p className="text-muted-foreground mt-2">
-                        + <span className="font-semibold text-foreground">2%</span> Top-Up Fee
-                      </p>
+                  {/* Price */}
+                  <div className="mb-6">
+                    <div className="flex items-baseline gap-2">
+                      <span className="font-display text-5xl lg:text-6xl font-bold text-foreground">150€</span>
+                      <span className="text-xl text-muted-foreground">/Monat</span>
                     </div>
-                    
-                    {/* Right: Crypto Options (vertical) */}
-                    <div className="text-right">
-                      <p className="text-xs text-muted-foreground mb-2">Auch mit Crypto</p>
-                      <div className="flex flex-col gap-1.5">
-                        <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-orange-500/10 border border-orange-500/20">
-                          <div className="w-3.5 h-3.5 rounded-full bg-orange-500 flex items-center justify-center">
-                            <span className="text-[7px] font-bold text-white">₿</span>
-                          </div>
-                          <span className="text-xs font-medium text-orange-600">BTC</span>
-                        </div>
-                        <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-violet-500/10 border border-violet-500/20">
-                          <div className="w-3.5 h-3.5 rounded-full bg-violet-500 flex items-center justify-center">
-                            <span className="text-[7px] font-bold text-white">Ξ</span>
-                          </div>
-                          <span className="text-xs font-medium text-violet-600">ETH</span>
-                        </div>
-                        <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20">
-                          <div className="w-3.5 h-3.5 rounded-full bg-emerald-500 flex items-center justify-center">
-                            <span className="text-[7px] font-bold text-white">₮</span>
-                          </div>
-                          <span className="text-xs font-medium text-emerald-600">USDT</span>
-                        </div>
-                      </div>
-                    </div>
+                    <p className="text-muted-foreground mt-2">
+                      + <span className="font-semibold text-foreground">2%</span> Top-Up Fee
+                    </p>
                   </div>
 
                   {/* CTA Button */}
@@ -129,7 +101,6 @@ const Pricing = () => {
                   <p className="text-center text-sm text-muted-foreground">
                     Volle Flexibilität. Monatlich kündbar.
                   </p>
-
                 </div>
               </div>
             </div>
