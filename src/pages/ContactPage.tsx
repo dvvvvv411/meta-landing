@@ -1,6 +1,6 @@
 import Header from "@/components/landing/Header";
 import Footer from "@/components/landing/Footer";
-import { Mail, Send } from "lucide-react";
+import { Mail, Send, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const ContactPage = () => {
@@ -13,9 +13,45 @@ const ContactPage = () => {
         {/* Background Elements */}
         <div className="absolute inset-0 hero-grid-pattern opacity-40" />
         
-        {/* Animated Gradient Orbs */}
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 orb-blue rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 orb-violet rounded-full blur-3xl animate-pulse" style={{ animationDelay: "1s" }} />
+        {/* Animated Gradient Orbs - Enhanced */}
+        <div className="absolute top-1/4 -left-32 w-[500px] h-[500px] orb-blue rounded-full blur-3xl animate-pulse opacity-60" />
+        <div className="absolute bottom-1/4 -right-32 w-[600px] h-[600px] orb-violet rounded-full blur-3xl animate-pulse opacity-50" style={{ animationDelay: "2s" }} />
+        <div className="absolute top-1/2 left-1/3 w-[400px] h-[400px] orb-blue rounded-full blur-3xl animate-pulse opacity-30" style={{ animationDelay: "4s" }} />
+        <div className="absolute bottom-10 left-1/4 w-[300px] h-[300px] orb-violet rounded-full blur-3xl animate-pulse opacity-40" style={{ animationDelay: "1s" }} />
+        
+        {/* Floating Decorative Elements - Top Area */}
+        <div className="absolute top-20 left-[15%] w-16 h-16 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 animate-pulse opacity-60" style={{ animationDuration: "4s" }} />
+        <div className="absolute top-32 right-[20%] w-12 h-12 rounded-full bg-gradient-to-br from-primary/20 to-accent/20 animate-pulse opacity-40" style={{ animationDuration: "3s", animationDelay: "1s" }} />
+        <div className="absolute top-16 right-[35%] w-8 h-8 rounded-lg bg-white/10 border border-white/10 animate-pulse opacity-50" style={{ animationDuration: "5s" }} />
+        <div className="absolute top-40 left-[8%] w-6 h-6 rounded-full bg-primary/30 animate-pulse opacity-60" style={{ animationDuration: "3.5s", animationDelay: "0.5s" }} />
+        
+        {/* Floating Decorative Elements - Bottom Area */}
+        <div className="absolute bottom-24 right-[15%] w-20 h-20 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 animate-pulse opacity-50" style={{ animationDuration: "4.5s", animationDelay: "2s" }} />
+        <div className="absolute bottom-32 left-[20%] w-10 h-10 rounded-full bg-gradient-to-br from-accent/30 to-primary/30 animate-pulse opacity-60" style={{ animationDuration: "3s" }} />
+        <div className="absolute bottom-16 left-[40%] w-6 h-6 rounded-md bg-primary/20 animate-pulse opacity-40" style={{ animationDuration: "4s", animationDelay: "1.5s" }} />
+        <div className="absolute bottom-40 right-[8%] w-8 h-8 rounded-lg bg-accent/20 animate-pulse opacity-50" style={{ animationDuration: "3.5s", animationDelay: "0.5s" }} />
+        
+        {/* Network Connection Lines */}
+        <svg className="absolute inset-0 w-full h-full pointer-events-none opacity-20">
+          <defs>
+            <linearGradient id="lineGradient1" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stopColor="rgb(59, 130, 246)" stopOpacity="0.6" />
+              <stop offset="100%" stopColor="rgb(139, 92, 246)" stopOpacity="0.6" />
+            </linearGradient>
+          </defs>
+          <line x1="10%" y1="20%" x2="25%" y2="35%" stroke="url(#lineGradient1)" strokeWidth="1" className="animate-pulse" />
+          <line x1="75%" y1="15%" x2="88%" y2="35%" stroke="url(#lineGradient1)" strokeWidth="1" className="animate-pulse" style={{ animationDelay: "0.5s" }} />
+          <line x1="12%" y1="75%" x2="28%" y2="60%" stroke="url(#lineGradient1)" strokeWidth="1" className="animate-pulse" style={{ animationDelay: "1s" }} />
+          <line x1="80%" y1="70%" x2="92%" y2="55%" stroke="url(#lineGradient1)" strokeWidth="1" className="animate-pulse" style={{ animationDelay: "1.5s" }} />
+        </svg>
+        
+        {/* Network Nodes */}
+        <div className="absolute top-[15%] left-[12%] w-3 h-3 rounded-full bg-primary/60 animate-ping" style={{ animationDuration: "3s" }} />
+        <div className="absolute top-[25%] right-[18%] w-2 h-2 rounded-full bg-accent/60 animate-ping" style={{ animationDuration: "4s", animationDelay: "1s" }} />
+        <div className="absolute bottom-[20%] left-[25%] w-2.5 h-2.5 rounded-full bg-primary/50 animate-ping" style={{ animationDuration: "3.5s", animationDelay: "0.5s" }} />
+        <div className="absolute bottom-[30%] right-[22%] w-2 h-2 rounded-full bg-accent/50 animate-ping" style={{ animationDuration: "4.5s", animationDelay: "2s" }} />
+        <div className="absolute top-[40%] left-[5%] w-2 h-2 rounded-full bg-primary/40 animate-ping" style={{ animationDuration: "3s", animationDelay: "1.5s" }} />
+        <div className="absolute bottom-[45%] right-[8%] w-2.5 h-2.5 rounded-full bg-accent/40 animate-ping" style={{ animationDuration: "4s", animationDelay: "0.5s" }} />
         
         <div className="relative z-10 section-padding flex items-center justify-center min-h-[calc(100vh-80px)]">
           <div className="container-tight">
@@ -28,22 +64,34 @@ const ContactPage = () => {
                 
                 {/* Left Side - Intro */}
                 <div className="space-y-6">
-                  <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-sm">
+                  <div 
+                    className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-sm opacity-0 animate-fade-in"
+                    style={{ animationDelay: "0.1s", animationFillMode: "forwards" }}
+                  >
                     <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
                     <span className="text-sm font-medium text-white/80">Kontakt</span>
                   </div>
                   
-                  <h1 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-white">
+                  <h1 
+                    className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-white opacity-0 animate-fade-in"
+                    style={{ animationDelay: "0.2s", animationFillMode: "forwards" }}
+                  >
                     Sprechen Sie mit uns.
                   </h1>
                   
-                  <p className="text-white/60 text-lg leading-relaxed">
+                  <p 
+                    className="text-white/60 text-lg leading-relaxed opacity-0 animate-fade-in"
+                    style={{ animationDelay: "0.3s", animationFillMode: "forwards" }}
+                  >
                     Haben Sie Fragen zu unserer Plattform oder möchten Sie mehr erfahren? 
                     Wir freuen uns auf Ihre Nachricht und antworten schnell und unkompliziert.
                   </p>
                   
                   {/* Response time badge */}
-                  <div className="flex items-center gap-2 text-white/50 text-sm">
+                  <div 
+                    className="flex items-center gap-2 text-white/50 text-sm opacity-0 animate-fade-in"
+                    style={{ animationDelay: "0.4s", animationFillMode: "forwards" }}
+                  >
                     <div className="w-2 h-2 rounded-full bg-green-500" />
                     <span>Antwort innerhalb von 24 Stunden</span>
                   </div>
@@ -53,9 +101,12 @@ const ContactPage = () => {
                 <div className="flex flex-col gap-4">
                   
                   {/* Email Mini-Card */}
-                  <div className="group bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300">
+                  <div 
+                    className="group bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-white/20 transition-all duration-300 opacity-0 animate-fade-in"
+                    style={{ animationDelay: "0.5s", animationFillMode: "forwards" }}
+                  >
                     <div className="flex items-start gap-4">
-                      <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary to-accent flex items-center justify-center shrink-0 shadow-lg">
+                      <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary to-accent flex items-center justify-center shrink-0 shadow-lg group-hover:scale-110 transition-transform duration-300">
                         <Mail className="w-6 h-6 text-white" />
                       </div>
                       <div className="flex-1 min-w-0">
@@ -69,9 +120,12 @@ const ContactPage = () => {
                   </div>
                   
                   {/* Telegram Mini-Card */}
-                  <div className="group bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300">
+                  <div 
+                    className="group bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-white/20 transition-all duration-300 opacity-0 animate-fade-in"
+                    style={{ animationDelay: "0.6s", animationFillMode: "forwards" }}
+                  >
                     <div className="flex items-start gap-4">
-                      <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-accent to-primary flex items-center justify-center shrink-0 shadow-lg">
+                      <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-accent to-primary flex items-center justify-center shrink-0 shadow-lg group-hover:scale-110 transition-transform duration-300">
                         <Send className="w-6 h-6 text-white" />
                       </div>
                       <div className="flex-1 min-w-0">
@@ -88,6 +142,12 @@ const ContactPage = () => {
               </div>
             </div>
           </div>
+        </div>
+        
+        {/* Scroll Indicator */}
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce opacity-50">
+          <span className="text-xs text-white/40">Scrollen</span>
+          <ChevronDown className="w-5 h-5 text-white/40" />
         </div>
       </section>
       
