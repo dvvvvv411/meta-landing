@@ -101,6 +101,38 @@ const Pricing = () => {
                   <p className="text-center text-sm text-muted-foreground">
                     Volle Flexibilität. Monatlich kündbar.
                   </p>
+
+                  {/* Crypto Payment Methods */}
+                  <div className="mt-6 pt-6 border-t border-border/50">
+                    <p className="text-xs text-muted-foreground text-center mb-3">
+                      Zahlung auch möglich mit
+                    </p>
+                    <div className="flex items-center justify-center gap-3">
+                      {/* Bitcoin */}
+                      <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-orange-500/10 border border-orange-500/20">
+                        <div className="w-4 h-4 rounded-full bg-orange-500 flex items-center justify-center">
+                          <span className="text-[8px] font-bold text-white">₿</span>
+                        </div>
+                        <span className="text-xs font-medium text-orange-600">BTC</span>
+                      </div>
+                      
+                      {/* Ethereum */}
+                      <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-violet-500/10 border border-violet-500/20">
+                        <div className="w-4 h-4 rounded-full bg-violet-500 flex items-center justify-center">
+                          <span className="text-[8px] font-bold text-white">Ξ</span>
+                        </div>
+                        <span className="text-xs font-medium text-violet-600">ETH</span>
+                      </div>
+                      
+                      {/* USDT */}
+                      <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20">
+                        <div className="w-4 h-4 rounded-full bg-emerald-500 flex items-center justify-center">
+                          <span className="text-[8px] font-bold text-white">₮</span>
+                        </div>
+                        <span className="text-xs font-medium text-emerald-600">USDT</span>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
