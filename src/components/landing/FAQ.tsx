@@ -55,24 +55,33 @@ const FAQ = () => {
           </p>
         </div>
 
-        {/* FAQ Accordion */}
-        <div className="max-w-3xl mx-auto opacity-0 animate-fade-up" style={{ animationDelay: "0.2s" }}>
-          <Accordion type="single" collapsible className="space-y-4">
-            {faqs.map((faq, index) => (
-              <AccordionItem 
-                key={index} 
-                value={`item-${index}`}
-                className="rounded-2xl glass-card border border-border/50 px-6 data-[state=open]:shadow-card transition-shadow"
-              >
-                <AccordionTrigger className="text-left font-display font-semibold text-foreground hover:no-underline py-6">
-                  {faq.question}
-                </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground pb-6 leading-relaxed">
-                  {faq.answer}
-                </AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
+        {/* FAQ Accordion in single card */}
+        <div className="max-w-3xl mx-auto">
+          <div className="glass-card rounded-3xl p-6 md:p-8 border border-border/50">
+            <Accordion type="single" collapsible className="space-y-0">
+              {faqs.map((faq, index) => (
+                <AccordionItem 
+                  key={index} 
+                  value={`item-${index}`}
+                  className={`border-b border-border/30 last:border-0 ${index === 0 ? '' : ''}`}
+                >
+                  <AccordionTrigger className="text-left hover:no-underline py-5 px-4 rounded-lg hover:bg-muted/30 transition-colors group [&[data-state=open]]:bg-muted/20">
+                    <div className="flex items-center gap-4 w-full">
+                      <span className="text-primary font-mono text-sm font-semibold min-w-[28px]">
+                        {String(index + 1).padStart(2, '0')}
+                      </span>
+                      <span className="font-display font-semibold text-foreground text-left flex-1">
+                        {faq.question}
+                      </span>
+                    </div>
+                  </AccordionTrigger>
+                  <AccordionContent className="pl-16 pr-4 pb-5 text-muted-foreground leading-relaxed">
+                    {faq.answer}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </div>
         </div>
       </div>
     </section>
