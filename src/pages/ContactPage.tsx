@@ -1,6 +1,6 @@
 import Header from "@/components/landing/Header";
 import Footer from "@/components/landing/Footer";
-import { Mail, Send, ChevronDown } from "lucide-react";
+import { Mail, Send, ChevronDown, Clock, MessageCircle, Shield, Lock, BadgeCheck, Globe, HelpCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const ContactPage = () => {
@@ -53,9 +53,29 @@ const ContactPage = () => {
         <div className="absolute top-[40%] left-[5%] w-2 h-2 rounded-full bg-primary/40 animate-ping" style={{ animationDuration: "3s", animationDelay: "1.5s" }} />
         <div className="absolute bottom-[45%] right-[8%] w-2.5 h-2.5 rounded-full bg-accent/40 animate-ping" style={{ animationDuration: "4s", animationDelay: "0.5s" }} />
         
-        <div className="relative z-10 section-padding flex items-center justify-center min-h-[calc(100vh-80px)]">
+        <div className="relative z-10 section-padding py-16 md:py-20">
           <div className="container-tight">
-            {/* One Large Glassmorphism Card */}
+            
+            {/* Trust Stats Bar - Above Card */}
+            <div 
+              className="flex flex-wrap justify-center gap-6 md:gap-10 mb-12 opacity-0 animate-fade-in"
+              style={{ animationDelay: "0.1s", animationFillMode: "forwards" }}
+            >
+              <div className="flex items-center gap-2">
+                <Clock className="w-5 h-5 text-primary" />
+                <span className="text-white/60 text-sm">{"< 24h Antwortzeit"}</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <MessageCircle className="w-5 h-5 text-primary" />
+                <span className="text-white/60 text-sm">Direkter Support</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Shield className="w-5 h-5 text-primary" />
+                <span className="text-white/60 text-sm">DSGVO-konform</span>
+              </div>
+            </div>
+            
+            {/* Main Glassmorphism Card */}
             <div className="relative bg-white/5 backdrop-blur-2xl border border-white/10 rounded-3xl p-8 md:p-12 lg:p-16 max-w-5xl mx-auto">
               {/* Gradient glow behind card */}
               <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-primary/10 to-accent/10 -z-10 blur-2xl" />
@@ -66,7 +86,7 @@ const ContactPage = () => {
                 <div className="space-y-6">
                   <div 
                     className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-sm opacity-0 animate-fade-in"
-                    style={{ animationDelay: "0.1s", animationFillMode: "forwards" }}
+                    style={{ animationDelay: "0.2s", animationFillMode: "forwards" }}
                   >
                     <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
                     <span className="text-sm font-medium text-white/80">Kontakt</span>
@@ -74,14 +94,14 @@ const ContactPage = () => {
                   
                   <h1 
                     className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-white opacity-0 animate-fade-in"
-                    style={{ animationDelay: "0.2s", animationFillMode: "forwards" }}
+                    style={{ animationDelay: "0.3s", animationFillMode: "forwards" }}
                   >
                     Sprechen Sie mit uns.
                   </h1>
                   
                   <p 
                     className="text-white/60 text-lg leading-relaxed opacity-0 animate-fade-in"
-                    style={{ animationDelay: "0.3s", animationFillMode: "forwards" }}
+                    style={{ animationDelay: "0.4s", animationFillMode: "forwards" }}
                   >
                     Haben Sie Fragen zu unserer Plattform oder möchten Sie mehr erfahren? 
                     Wir freuen uns auf Ihre Nachricht und antworten schnell und unkompliziert.
@@ -90,7 +110,7 @@ const ContactPage = () => {
                   {/* Response time badge */}
                   <div 
                     className="flex items-center gap-2 text-white/50 text-sm opacity-0 animate-fade-in"
-                    style={{ animationDelay: "0.4s", animationFillMode: "forwards" }}
+                    style={{ animationDelay: "0.5s", animationFillMode: "forwards" }}
                   >
                     <div className="w-2 h-2 rounded-full bg-green-500" />
                     <span>Antwort innerhalb von 24 Stunden</span>
@@ -103,7 +123,7 @@ const ContactPage = () => {
                   {/* Email Mini-Card */}
                   <div 
                     className="group bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-white/20 transition-all duration-300 opacity-0 animate-fade-in"
-                    style={{ animationDelay: "0.5s", animationFillMode: "forwards" }}
+                    style={{ animationDelay: "0.6s", animationFillMode: "forwards" }}
                   >
                     <div className="flex items-start gap-4">
                       <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary to-accent flex items-center justify-center shrink-0 shadow-lg group-hover:scale-110 transition-transform duration-300">
@@ -122,7 +142,7 @@ const ContactPage = () => {
                   {/* Telegram Mini-Card */}
                   <div 
                     className="group bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-white/20 transition-all duration-300 opacity-0 animate-fade-in"
-                    style={{ animationDelay: "0.6s", animationFillMode: "forwards" }}
+                    style={{ animationDelay: "0.7s", animationFillMode: "forwards" }}
                   >
                     <div className="flex items-start gap-4">
                       <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-accent to-primary flex items-center justify-center shrink-0 shadow-lg group-hover:scale-110 transition-transform duration-300">
@@ -141,6 +161,52 @@ const ContactPage = () => {
                 </div>
               </div>
             </div>
+            
+            {/* FAQ Section - Below Card */}
+            <div 
+              className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-6 md:p-8 mt-12 max-w-3xl mx-auto opacity-0 animate-fade-in"
+              style={{ animationDelay: "0.8s", animationFillMode: "forwards" }}
+            >
+              <div className="flex items-center gap-3 mb-6">
+                <HelpCircle className="w-5 h-5 text-primary" />
+                <h2 className="font-display text-lg font-semibold text-white">Häufige Fragen</h2>
+              </div>
+              
+              <div className="space-y-5">
+                <div className="border-b border-white/10 pb-4">
+                  <h3 className="text-white/90 font-medium mb-1">Wie schnell erhalte ich eine Antwort?</h3>
+                  <p className="text-white/50 text-sm">Wir antworten in der Regel innerhalb von 24 Stunden – oft sogar schneller.</p>
+                </div>
+                <div className="border-b border-white/10 pb-4">
+                  <h3 className="text-white/90 font-medium mb-1">Welche Kontaktmöglichkeit ist die schnellste?</h3>
+                  <p className="text-white/50 text-sm">Telegram bietet die schnellste Kommunikation für dringende Anfragen.</p>
+                </div>
+                <div>
+                  <h3 className="text-white/90 font-medium mb-1">Gibt es Support in meiner Sprache?</h3>
+                  <p className="text-white/50 text-sm">Unser Support ist auf Deutsch und Englisch verfügbar.</p>
+                </div>
+              </div>
+            </div>
+            
+            {/* Trust Badges Row */}
+            <div 
+              className="flex flex-wrap justify-center gap-8 mt-12 pt-8 border-t border-white/10 opacity-0 animate-fade-in"
+              style={{ animationDelay: "0.9s", animationFillMode: "forwards" }}
+            >
+              <div className="flex items-center gap-2">
+                <Lock className="w-4 h-4 text-white/40" />
+                <span className="text-white/40 text-xs">SSL Verschlüsselt</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <BadgeCheck className="w-4 h-4 text-white/40" />
+                <span className="text-white/40 text-xs">Verifiziertes Unternehmen</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Globe className="w-4 h-4 text-white/40" />
+                <span className="text-white/40 text-xs">EU-basiert</span>
+              </div>
+            </div>
+            
           </div>
         </div>
         
