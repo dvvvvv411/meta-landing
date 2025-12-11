@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Check, Zap } from "lucide-react";
+import metaLogo from "@/assets/meta-logo.png";
 
 const Hero = () => {
   return (
@@ -20,13 +21,18 @@ const Hero = () => {
           
           {/* Left Side: Text Content */}
           <div className="text-center lg:text-left">
-            {/* Badge */}
+            {/* Meta Logo Badge */}
             <div 
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-800/50 backdrop-blur-md border border-slate-700/50 mb-8 opacity-0 animate-fade-up"
+              className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-slate-800/50 backdrop-blur-md border border-slate-700/50 mb-8 opacity-0 animate-fade-up"
               style={{ animationDelay: "0.1s" }}
             >
-              <Zap className="w-4 h-4 text-primary" />
-              <span className="text-sm font-medium text-slate-300">Infrastruktur für Meta Ads</span>
+              <img 
+                src={metaLogo} 
+                alt="Meta" 
+                className="h-5 w-auto brightness-0 invert opacity-80"
+              />
+              <div className="w-px h-4 bg-slate-600" />
+              <span className="text-sm font-medium text-slate-300">Offizieller Agency Partner</span>
             </div>
 
             {/* Headline */}
