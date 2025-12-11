@@ -240,7 +240,7 @@ const Hero = () => {
             
             {/* Meta Logo */}
             <div className="flex justify-center mt-6 opacity-0 animate-fade-up" style={{ animationDelay: "0.8s" }}>
-              <img src={metaLogo} alt="Meta" className="h-8" />
+              <img src={metaLogo} alt="Meta" className="h-8 brightness-0 invert" />
             </div>
           </div>
           </div>
