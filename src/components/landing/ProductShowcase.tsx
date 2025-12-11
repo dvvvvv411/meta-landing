@@ -2,7 +2,7 @@ import { BarChart3, PieChart, Edit3, Activity, CheckCircle2, AlertCircle } from 
 
 const ProductShowcase = () => {
   return (
-    <section className="section-padding bg-background relative overflow-hidden">
+    <section id="dashboard" className="section-padding bg-background relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-radial from-primary/5 via-transparent to-transparent rounded-full" />
