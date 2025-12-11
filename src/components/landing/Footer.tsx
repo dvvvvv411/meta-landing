@@ -36,38 +36,23 @@ interface FooterProps {
 const Footer = ({ hideCTA = false }: FooterProps) => {
   return (
     <footer className="relative">
-      {/* CTA Banner - Modern Design */}
+      {/* CTA Banner - Clean & Elegant */}
       {!hideCTA && (
       <div className="border-t border-border/30">
         <div className="container-tight py-10">
-          <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-background via-secondary/30 to-background border border-border/50 p-6 md:p-8">
+          <div className="relative overflow-hidden rounded-2xl bg-gradient-to-r from-primary/5 via-background to-accent/5 border border-border p-6 md:p-8 shadow-sm">
             
-            {/* Animated Background Elements */}
-            <div className="absolute inset-0 pointer-events-none overflow-hidden">
-              {/* Gradient Orbs */}
-              <div className="absolute -top-20 -left-20 w-[250px] h-[250px] bg-primary/10 rounded-full blur-3xl animate-pulse" />
-              <div className="absolute -bottom-20 -right-20 w-[280px] h-[280px] bg-accent/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: "1s" }} />
-              
-              {/* Grid Pattern */}
-              <div className="absolute inset-0 opacity-30" style={{
-                backgroundImage: `linear-gradient(rgba(0,0,0,0.03) 1px, transparent 1px),
-                                 linear-gradient(90deg, rgba(0,0,0,0.03) 1px, transparent 1px)`,
-                backgroundSize: '40px 40px'
-              }} />
-              
-              {/* Floating Elements */}
-              <div className="absolute top-6 right-[20%] w-2 h-2 rounded-full bg-primary/30 animate-ping" style={{ animationDuration: "3s" }} />
-              <div className="absolute bottom-6 left-[15%] w-1.5 h-1.5 rounded-full bg-accent/30 animate-ping" style={{ animationDuration: "4s", animationDelay: "1s" }} />
-            </div>
+            {/* Accent Line Top */}
+            <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-primary via-accent to-primary" />
+            
+            {/* Subtle Dot Pattern */}
+            <div className="absolute inset-0 opacity-30 pointer-events-none" style={{
+              backgroundImage: `radial-gradient(circle at 1px 1px, hsl(var(--foreground) / 0.04) 1px, transparent 0)`,
+              backgroundSize: '20px 20px'
+            }} />
             
             {/* Content */}
             <div className="relative z-10 text-center">
-              {/* Badge */}
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 backdrop-blur-sm border border-primary/20 mb-4">
-                <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
-                <span className="text-foreground/70 text-xs">Keine Kreditkarte erforderlich</span>
-              </div>
-              
               {/* Headline */}
               <h3 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-2">
                 Bereit durchzustarten?
@@ -78,7 +63,6 @@ const Footer = ({ hideCTA = false }: FooterProps) => {
               
               {/* CTA Button */}
               <Button 
-                variant="hero"
                 size="lg" 
                 className="group"
               >
