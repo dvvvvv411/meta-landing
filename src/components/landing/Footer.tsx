@@ -5,13 +5,10 @@ import { Link } from "react-router-dom";
 const footerLinks = {
   product: [
     { label: "Features", href: "/#features" },
-    { label: "So funktioniert's", href: "/wie-funktioniert-es" },
-    { label: "Sicherheit", href: "/sicherheit" },
     { label: "Pricing", href: "/#pricing" },
     { label: "FAQ", href: "/#faq" },
   ],
   company: [
-    { label: "Über uns", href: "/ueber-uns" },
     { label: "Blog", href: "#" },
     { label: "Karriere", href: "#" },
     { label: "Kontakt", href: "#" },
