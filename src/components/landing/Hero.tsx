@@ -30,15 +30,15 @@ const Hero = () => {
             </div>
 
             {/* Headline */}
-            <h1 
-              className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-6xl xl:text-7xl font-bold tracking-tight text-white mb-6 opacity-0 animate-fade-up"
-              style={{ animationDelay: "0.2s" }}
-            >
-              Meta Ads Infrastruktur{" "}
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary via-primary-glow to-accent">
-                für Skalierer.
-              </span>
-            </h1>
+          <h1 
+            className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-6xl xl:text-7xl font-bold tracking-tight text-white mb-6 opacity-0 animate-fade-up"
+            style={{ animationDelay: "0.2s" }}
+          >
+            Meta Agency Accounts{" "}
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary via-primary-glow to-accent">
+              Sofort einsatzbereit.
+            </span>
+          </h1>
 
             {/* Subline */}
             <p 
