@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Check, Zap } from "lucide-react";
-import metaLogo from "@/assets/meta-logo.png";
 
 const Hero = () => {
   return (
@@ -236,13 +235,8 @@ const Hero = () => {
                     </div>
                   </div>
                 </div>
+              </div>
             </div>
-            
-            {/* Meta Logo */}
-            <div className="flex justify-center mt-6 opacity-0 animate-fade-up" style={{ animationDelay: "0.8s" }}>
-              <img src={metaLogo} alt="Meta" className="h-8 brightness-0 invert" />
-            </div>
-          </div>
           </div>
         </div>
       </div>
