@@ -24,7 +24,7 @@ const Header = () => {
             <img 
               src={MetaNetworkLogo} 
               alt="MetaNetwork.Agency" 
-              className="h-8 w-auto"
+              className="h-8 w-auto object-contain shrink-0"
             />
           </a>
           
@@ -33,7 +33,7 @@ const Header = () => {
             <img 
               src={MetaNetworkLogo} 
               alt="MetaNetwork.Agency" 
-              className="h-7 w-auto"
+              className="h-7 w-auto object-contain shrink-0"
             />
           </a>
           
@@ -77,7 +77,7 @@ const Header = () => {
                     <img 
                       src={MetaNetworkLogo} 
                       alt="MetaNetwork.Agency" 
-                      className="h-6 w-auto"
+                      className="h-6 w-auto object-contain shrink-0"
                     />
                   </div>
 
