@@ -59,9 +59,12 @@ const Footer = ({ hideCTA = false }: FooterProps) => {
               <Button 
                 size="lg" 
                 className="group"
+                asChild
               >
-                Jetzt kostenlos registrieren
-                <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                <a href="https://web.metanetwork.agency" target="_blank" rel="noopener noreferrer">
+                  Jetzt kostenlos registrieren
+                  <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                </a>
               </Button>
               
               {/* Trust Elements */}

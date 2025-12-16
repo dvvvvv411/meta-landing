@@ -20,9 +20,11 @@ const CTA = () => {
               mit skalierbarem Meta Advertising.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Button variant="hero" size="xl" className="group w-full sm:w-auto">
-                Jetzt kostenlos registrieren
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              <Button variant="hero" size="xl" className="group w-full sm:w-auto" asChild>
+                <a href="https://web.metanetwork.agency" target="_blank" rel="noopener noreferrer">
+                  Jetzt kostenlos registrieren
+                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                </a>
               </Button>
             </div>
             <p className="text-sm text-muted-foreground mt-6">
