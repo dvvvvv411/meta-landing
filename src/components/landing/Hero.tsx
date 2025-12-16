@@ -4,7 +4,7 @@ import metaIcon from "@/assets/metaicon.png";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden bg-slate-950 pt-20">
+    <section id="hero" className="relative min-h-screen flex items-center overflow-hidden bg-slate-950 pt-20">
       {/* Grid Pattern Background */}
       <div className="absolute inset-0 hero-grid-pattern opacity-40" />
       

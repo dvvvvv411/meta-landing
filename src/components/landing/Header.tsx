@@ -20,22 +20,28 @@ const Header = () => {
       <div className="container-tight">
         <div className="relative flex items-center justify-between h-16 md:h-20">
           {/* Desktop Logo */}
-          <a href="/" className="hidden md:flex items-center">
+          <button 
+            onClick={() => document.getElementById('hero')?.scrollIntoView({ behavior: 'smooth' })}
+            className="hidden md:flex items-center"
+          >
             <img 
               src={MetaNetworkLogo} 
               alt="MetaNetwork.Agency" 
               className="h-8 w-auto object-contain shrink-0"
             />
-          </a>
+          </button>
           
           {/* Mobile: Zentriertes Logo */}
-          <a href="/" className="md:hidden absolute left-1/2 -translate-x-1/2">
+          <button 
+            onClick={() => document.getElementById('hero')?.scrollIntoView({ behavior: 'smooth' })}
+            className="md:hidden absolute left-1/2 -translate-x-1/2"
+          >
             <img 
               src={MetaNetworkLogo} 
               alt="MetaNetwork.Agency" 
               className="h-7 w-auto object-contain shrink-0"
             />
-          </a>
+          </button>
           
           {/* Spacer für Mobile (für Balance) */}
           <div className="w-10 md:hidden" />
@@ -55,8 +61,10 @@ const Header = () => {
 
           {/* Desktop CTA + Mobile Menu */}
           <div className="flex items-center gap-3">
-            <Button variant="ghost" size="sm" className="hidden md:inline-flex text-slate-400 hover:text-white hover:bg-slate-800/50">
-              Login
+            <Button variant="ghost" size="sm" className="hidden md:inline-flex text-slate-400 hover:text-white hover:bg-slate-800/50" asChild>
+              <a href="https://web.metanetwork.agency" target="_blank" rel="noopener noreferrer">
+                Login
+              </a>
             </Button>
             <Button variant="hero" size="sm" className="hidden sm:inline-flex group" asChild>
               <a href="https://web.metanetwork.agency" target="_blank" rel="noopener noreferrer">
@@ -101,8 +109,10 @@ const Header = () => {
 
                   {/* Mobile CTA */}
                   <div className="p-4 border-t border-slate-800 space-y-3">
-                    <Button variant="ghost" className="w-full text-slate-400 hover:text-white hover:bg-slate-800/50">
-                      Login
+                    <Button variant="ghost" className="w-full text-slate-400 hover:text-white hover:bg-slate-800/50" asChild>
+                      <a href="https://web.metanetwork.agency" target="_blank" rel="noopener noreferrer">
+                        Login
+                      </a>
                     </Button>
                     <Button variant="hero" className="w-full group" asChild>
                       <a href="https://web.metanetwork.agency" target="_blank" rel="noopener noreferrer">
