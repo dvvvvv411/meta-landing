@@ -8,11 +8,11 @@ const Hero = () => {
       {/* Grid Pattern Background */}
       <div className="absolute inset-0 hero-grid-pattern opacity-40" />
       
-      {/* Animated Gradient Orbs */}
+      {/* Animated Gradient Orbs - Responsive sizes */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-1/4 -left-32 w-[500px] h-[500px] orb-blue rounded-full blur-3xl animate-float-slow opacity-60" />
-        <div className="absolute bottom-1/4 -right-32 w-[600px] h-[600px] orb-violet rounded-full blur-3xl animate-float-slow opacity-50" style={{ animationDelay: "-4s" }} />
-        <div className="absolute top-1/2 left-1/3 w-[400px] h-[400px] orb-blue rounded-full blur-3xl animate-float opacity-30" style={{ animationDelay: "-2s" }} />
+        <div className="absolute top-1/4 -left-16 sm:-left-32 w-[200px] h-[200px] sm:w-[350px] sm:h-[350px] lg:w-[500px] lg:h-[500px] orb-blue rounded-full blur-3xl animate-float-slow opacity-60" />
+        <div className="absolute bottom-1/4 -right-16 sm:-right-32 w-[250px] h-[250px] sm:w-[400px] sm:h-[400px] lg:w-[600px] lg:h-[600px] orb-violet rounded-full blur-3xl animate-float-slow opacity-50" style={{ animationDelay: "-4s" }} />
+        <div className="absolute top-1/2 left-1/3 w-[150px] h-[150px] sm:w-[250px] sm:h-[250px] lg:w-[400px] lg:h-[400px] orb-blue rounded-full blur-3xl animate-float opacity-30" style={{ animationDelay: "-2s" }} />
       </div>
 
       {/* Main Content */}
@@ -32,7 +32,7 @@ const Hero = () => {
 
             {/* Headline */}
           <h1 
-            className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-6xl xl:text-7xl font-bold tracking-tight text-white mb-6 opacity-0 animate-fade-up"
+            className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight text-white mb-6 opacity-0 animate-fade-up"
             style={{ animationDelay: "0.2s" }}
           >
             Meta Agency Accounts{" "}
@@ -92,9 +92,9 @@ const Hero = () => {
           </div>
 
           {/* Right Side: Large Dashboard Mockup */}
-          <div className="relative flex items-center justify-center h-[450px] md:h-[550px] lg:h-[600px]">
+          <div className="relative flex items-center justify-center min-h-[400px] md:h-[550px] lg:h-[600px]">
             <div 
-              className="w-full max-w-[480px] lg:max-w-[520px] opacity-0 animate-scale-in"
+              className="w-full max-w-[320px] sm:max-w-[400px] lg:max-w-[520px] opacity-0 animate-scale-in"
               style={{ animationDelay: "0.5s" }}
             >
               <div className="relative rounded-2xl bg-white/5 backdrop-blur-2xl border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.4)] overflow-hidden">
@@ -107,17 +107,17 @@ const Hero = () => {
                 
                 <div className="relative">
                   {/* Window Chrome Header */}
-                  <div className="flex items-center justify-between px-4 py-3 border-b border-white/10 bg-white/5 backdrop-blur-md">
-                    <div className="flex items-center gap-2">
-                      <div className="w-3 h-3 rounded-full bg-red-500/80" />
-                      <div className="w-3 h-3 rounded-full bg-yellow-500/80" />
-                      <div className="w-3 h-3 rounded-full bg-green-500/80" />
+                  <div className="flex items-center justify-between px-3 sm:px-4 py-2.5 sm:py-3 border-b border-white/10 bg-white/5 backdrop-blur-md">
+                    <div className="flex items-center gap-1.5 sm:gap-2">
+                      <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-red-500/80" />
+                      <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-yellow-500/80" />
+                      <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-green-500/80" />
                     </div>
-                    <span className="text-xs font-medium text-slate-400">MetaNetwork Dashboard</span>
-                    <img src={metaIcon} alt="Meta" className="h-4 w-auto" />
+                    <span className="text-[10px] sm:text-xs font-medium text-slate-400">MetaNetwork Dashboard</span>
+                    <img src={metaIcon} alt="Meta" className="h-3 sm:h-4 w-auto" />
                   </div>
 
-                  <div className="p-4 md:p-5">
+                  <div className="p-3 sm:p-4 md:p-5">
                     {/* Account Status Bar */}
                     <div className="flex items-center justify-between p-3 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 mb-4">
                       <div className="flex items-center gap-2">
@@ -127,8 +127,8 @@ const Hero = () => {
                       <span className="text-xs text-slate-500">Agency ID: MN-4821</span>
                     </div>
 
-                    {/* 4-Column Metrics Grid */}
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-4">
+                    {/* 4-Column Metrics Grid - 2x2 on mobile */}
+                    <div className="grid grid-cols-2 gap-2 sm:gap-3 mb-3 sm:mb-4">
                       {[
                         { label: "Ad Spend", value: "€47,892", trend: "+12.5%", positive: true },
                         { label: "ROAS", value: "4.2x", trend: "+0.8x", positive: true },
@@ -137,25 +137,25 @@ const Hero = () => {
                       ].map((metric, i) => (
                         <div 
                           key={i} 
-                          className="p-3 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-colors opacity-0 animate-fade-up"
+                          className="p-2 sm:p-3 rounded-lg sm:rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-colors opacity-0 animate-fade-up"
                           style={{ animationDelay: `${0.7 + i * 0.1}s` }}
                         >
-                          <p className="text-[10px] text-slate-500 uppercase tracking-wider mb-1">{metric.label}</p>
-                          <p className="font-display font-bold text-white text-sm md:text-base">{metric.value}</p>
-                          <span className={`text-[10px] ${metric.positive ? 'text-green-400' : 'text-red-400'}`}>
+                          <p className="text-[9px] sm:text-[10px] text-slate-500 uppercase tracking-wider mb-0.5 sm:mb-1">{metric.label}</p>
+                          <p className="font-display font-bold text-white text-xs sm:text-sm md:text-base">{metric.value}</p>
+                          <span className={`text-[9px] sm:text-[10px] ${metric.positive ? 'text-green-400' : 'text-red-400'}`}>
                             {metric.trend} ↑
                           </span>
                         </div>
                       ))}
                     </div>
 
-                    {/* Performance Chart */}
-                    <div className="p-4 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 mb-4">
-                      <div className="flex items-center justify-between mb-3">
-                        <span className="text-xs font-medium text-slate-400">Performance (7 Tage)</span>
-                        <span className="text-[10px] text-slate-500">€67,420 Gesamt</span>
+                    {/* Performance Chart - Hidden on very small screens */}
+                    <div className="hidden sm:block p-3 sm:p-4 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 mb-3 sm:mb-4">
+                      <div className="flex items-center justify-between mb-2 sm:mb-3">
+                        <span className="text-[10px] sm:text-xs font-medium text-slate-400">Performance (7 Tage)</span>
+                        <span className="text-[9px] sm:text-[10px] text-slate-500">€67,420 Gesamt</span>
                       </div>
-                      <div className="h-24 flex items-end justify-between gap-2">
+                      <div className="h-16 sm:h-24 flex items-end justify-between gap-1 sm:gap-2">
                         {[
                           { height: 45, day: "Mo" },
                           { height: 72, day: "Di" },
@@ -181,19 +181,18 @@ const Hero = () => {
                       </div>
                     </div>
 
-                    {/* Two Column Info */}
-                    <div className="grid grid-cols-2 gap-3 mb-4">
+                    {/* Two Column Info - Stacked on mobile */}
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-3 mb-3 sm:mb-4">
                       {/* Active Campaigns */}
-                      <div className="p-3 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10">
-                        <p className="text-[10px] text-slate-500 uppercase tracking-wider mb-2">Aktive Kampagnen</p>
-                        <div className="space-y-2">
+                      <div className="p-2 sm:p-3 rounded-lg sm:rounded-xl bg-white/5 backdrop-blur-sm border border-white/10">
+                        <p className="text-[9px] sm:text-[10px] text-slate-500 uppercase tracking-wider mb-1.5 sm:mb-2">Aktive Kampagnen</p>
+                        <div className="space-y-1.5 sm:space-y-2">
                           {[
                             { name: "Campaign Alpha", status: "green" },
                             { name: "Campaign Beta", status: "green" },
-                            { name: "Campaign Gamma", status: "yellow" },
                           ].map((campaign, i) => (
                             <div key={i} className="flex items-center justify-between">
-                              <span className="text-[11px] text-slate-300 truncate">{campaign.name}</span>
+                              <span className="text-[10px] sm:text-[11px] text-slate-300 truncate">{campaign.name}</span>
                               <div className={`w-1.5 h-1.5 rounded-full ${campaign.status === 'green' ? 'bg-green-500' : 'bg-yellow-500'}`} />
                             </div>
                           ))}
@@ -201,20 +200,19 @@ const Hero = () => {
                       </div>
 
                       {/* Recent Activity */}
-                      <div className="p-3 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10">
-                        <p className="text-[10px] text-slate-500 uppercase tracking-wider mb-2">Letzte Aktivität</p>
-                        <div className="space-y-2">
+                      <div className="p-2 sm:p-3 rounded-lg sm:rounded-xl bg-white/5 backdrop-blur-sm border border-white/10">
+                        <p className="text-[9px] sm:text-[10px] text-slate-500 uppercase tracking-wider mb-1.5 sm:mb-2">Letzte Aktivität</p>
+                        <div className="space-y-1.5 sm:space-y-2">
                           {[
                             { action: "Budget erhöht", time: "vor 2m" },
                             { action: "Neue Ad erstellt", time: "vor 15m" },
-                            { action: "Optimierung", time: "vor 1h" },
                           ].map((activity, i) => (
                             <div key={i} className="flex items-center justify-between">
                               <div className="flex items-center gap-1">
-                                <Check className="w-2.5 h-2.5 text-green-400" />
-                                <span className="text-[11px] text-slate-300 truncate">{activity.action}</span>
+                                <Check className="w-2 h-2 sm:w-2.5 sm:h-2.5 text-green-400" />
+                                <span className="text-[10px] sm:text-[11px] text-slate-300 truncate">{activity.action}</span>
                               </div>
-                              <span className="text-[9px] text-slate-500">{activity.time}</span>
+                              <span className="text-[8px] sm:text-[9px] text-slate-500">{activity.time}</span>
                             </div>
                           ))}
                         </div>
@@ -222,12 +220,12 @@ const Hero = () => {
                     </div>
 
                     {/* Spend Limit Progress */}
-                    <div className="p-3 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10">
-                      <div className="flex items-center justify-between mb-2">
-                        <span className="text-[10px] text-slate-500 uppercase tracking-wider">Spend Limit</span>
-                        <span className="text-[10px] text-slate-400">€78,500 / €100,000</span>
+                    <div className="p-2 sm:p-3 rounded-lg sm:rounded-xl bg-white/5 backdrop-blur-sm border border-white/10">
+                      <div className="flex items-center justify-between mb-1.5 sm:mb-2">
+                        <span className="text-[9px] sm:text-[10px] text-slate-500 uppercase tracking-wider">Spend Limit</span>
+                        <span className="text-[9px] sm:text-[10px] text-slate-400">€78,500 / €100,000</span>
                       </div>
-                      <div className="h-2 rounded-full bg-white/10 overflow-hidden">
+                      <div className="h-1.5 sm:h-2 rounded-full bg-white/10 overflow-hidden">
                         <div 
                           className="h-full rounded-full bg-gradient-to-r from-primary to-accent animate-grow-width origin-left"
                           style={{ width: "78.5%", animationDelay: "1.5s" }}
