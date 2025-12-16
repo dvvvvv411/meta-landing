@@ -1,6 +1,7 @@
 import { ArrowRight, CheckCircle2, Shield, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import MetaNetworkLogo from "@/assets/MetaNetwork_Logo.png";
 
 const footerLinks = {
   navigation: [
@@ -90,13 +91,12 @@ const Footer = ({ hideCTA = false }: FooterProps) => {
           <div className="grid grid-cols-2 md:grid-cols-5 gap-8 lg:gap-12">
             {/* Brand */}
             <div className="col-span-2">
-              <Link to="/" className="flex items-center gap-2.5 mb-4">
-                <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-primary to-accent flex items-center justify-center shadow-lg shadow-primary/20">
-                  <span className="text-primary-foreground font-display font-bold text-sm">M</span>
-                </div>
-                <span className="font-display font-semibold text-lg text-foreground">
-                  MetaNetwork
-                </span>
+              <Link to="/" className="flex items-center mb-4">
+                <img 
+                  src={MetaNetworkLogo} 
+                  alt="MetaNetwork.Agency" 
+                  className="h-8 w-auto"
+                />
               </Link>
               <p className="text-sm text-muted-foreground max-w-xs leading-relaxed">
                 Premium Meta Ads Accounts für professionelles Performance Marketing. Sicher, skalierbar, sofort einsatzbereit.

@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import MetaNetworkLogo from "@/assets/MetaNetwork_Logo.png";
 
 const Header = () => {
   return (
@@ -7,14 +8,12 @@ const Header = () => {
       <div className="container-tight">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <a href="/" className="flex items-center gap-2 group">
-            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-primary to-accent flex items-center justify-center">
-              <span className="text-white font-display font-bold text-sm">M</span>
-            </div>
-            <span className="font-display font-semibold text-white text-lg tracking-tight">
-              MetaNetwork
-              <span className="text-slate-400">.Agency</span>
-            </span>
+          <a href="/" className="flex items-center">
+            <img 
+              src={MetaNetworkLogo} 
+              alt="MetaNetwork.Agency" 
+              className="h-7 md:h-8 w-auto"
+            />
           </a>
 
           {/* Navigation */}
