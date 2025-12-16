@@ -18,15 +18,27 @@ const Header = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-slate-950/90 backdrop-blur-xl border-b border-slate-800/50">
       <div className="container-tight">
-        <div className="flex items-center justify-between h-16 md:h-20">
-          {/* Logo */}
-          <a href="/" className="flex items-center">
+        <div className="relative flex items-center justify-between h-16 md:h-20">
+          {/* Desktop Logo */}
+          <a href="/" className="hidden md:flex items-center">
             <img 
               src={MetaNetworkLogo} 
               alt="MetaNetwork.Agency" 
-              className="h-7 md:h-8 w-auto"
+              className="h-8 w-auto"
             />
           </a>
+          
+          {/* Mobile: Zentriertes Logo */}
+          <a href="/" className="md:hidden absolute left-1/2 -translate-x-1/2">
+            <img 
+              src={MetaNetworkLogo} 
+              alt="MetaNetwork.Agency" 
+              className="h-7 w-auto"
+            />
+          </a>
+          
+          {/* Spacer für Mobile (für Balance) */}
+          <div className="w-10 md:hidden" />
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-6">
