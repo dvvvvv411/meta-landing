@@ -75,6 +75,7 @@ const Hero = () => {
             >
               <div className="group relative rounded-2xl p-[1.5px] bg-gradient-to-r from-primary via-accent to-primary w-full sm:w-auto">
                 <button 
+                  onClick={() => document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' })}
                   className="relative flex items-center justify-center gap-2 w-full h-12 sm:h-14 md:h-16 px-6 sm:px-8 md:px-10 bg-slate-950/80 backdrop-blur-sm hover:bg-slate-950/60 text-white text-base sm:text-lg font-semibold rounded-2xl transition-all"
                 >
                   Preise sehen
@@ -84,6 +85,7 @@ const Hero = () => {
               <Button 
                 variant="outline" 
                 size="xl"
+                onClick={() => document.getElementById('how-it-works')?.scrollIntoView({ behavior: 'smooth' })}
                 className="border-slate-700 bg-slate-800/30 text-slate-300 hover:bg-slate-800/50 hover:text-white hover:border-slate-600"
               >
                 Mehr erfahren
