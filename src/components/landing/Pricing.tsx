@@ -93,9 +93,11 @@ const Pricing = () => {
                   </div>
 
                   {/* CTA Button */}
-                  <Button variant="hero" size="xl" className="w-full group mb-4">
-                    Jetzt registrieren
-                    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                  <Button variant="hero" size="xl" className="w-full group mb-4" asChild>
+                    <a href="https://web.metanetwork.agency" target="_blank" rel="noopener noreferrer">
+                      Jetzt registrieren
+                      <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                    </a>
                   </Button>
 
                   <p className="text-center text-sm text-muted-foreground">

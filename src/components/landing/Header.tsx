@@ -58,9 +58,11 @@ const Header = () => {
             <Button variant="ghost" size="sm" className="hidden md:inline-flex text-slate-400 hover:text-white hover:bg-slate-800/50">
               Login
             </Button>
-            <Button variant="hero" size="sm" className="hidden sm:inline-flex group">
-              Jetzt starten
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
+            <Button variant="hero" size="sm" className="hidden sm:inline-flex group" asChild>
+              <a href="https://web.metanetwork.agency" target="_blank" rel="noopener noreferrer">
+                Jetzt starten
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
+              </a>
             </Button>
 
             {/* Mobile Hamburger Menu */}
@@ -102,9 +104,11 @@ const Header = () => {
                     <Button variant="ghost" className="w-full text-slate-400 hover:text-white hover:bg-slate-800/50">
                       Login
                     </Button>
-                    <Button variant="hero" className="w-full group">
-                      Jetzt starten
-                      <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
+                    <Button variant="hero" className="w-full group" asChild>
+                      <a href="https://web.metanetwork.agency" target="_blank" rel="noopener noreferrer">
+                        Jetzt starten
+                        <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
+                      </a>
                     </Button>
                   </div>
                 </div>
